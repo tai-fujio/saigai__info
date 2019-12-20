@@ -1,0 +1,11 @@
+<div id ="right_bar">
+  <div class = container>
+    <div class = close_btn>
+    <button href="javascript:void(0)" class="closebtn" id='close-nav'>x</button>
+    </div>
+    <%= render 'sites/show' ,site:@site %>
+    <%= render 'comments/new' ,locals:{site:@site,map:@map,review:@review} %>
+    <%= render 'comments/index',layout:'comments/content_frame',locals:{comments:@comments,site:@site} %>
+
+  </div>
+</div>
