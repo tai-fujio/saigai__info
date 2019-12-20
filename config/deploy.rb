@@ -11,6 +11,7 @@ set :keep_releases, 5
 set :rbenv_ruby, '2.6.5'
 set :rbenv_type, :system
 set :log_level, :debug
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/packs", ".bundle", "node_modules"
 
 namespace :deploy do
   desc 'Restart application'
@@ -44,6 +45,18 @@ namespace :deploy do
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
+    end
+  end
+end
+
+before "deploy:assets:precompile", "deploy:yarn_install"
+namespace :deploy do
+  desc "Run rake yarn install"
+  task :yarn_install do
+    on roles(:web) do
+      within release_path do
+        execute("cd #{release_path} && yarn install --silent --no-progress --no-audit --no-optional")
+      end
     end
   end
 end
