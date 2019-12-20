@@ -1,4 +1,5 @@
 class Map < ApplicationRecord
+  has_secure_password
   has_many :sites ,dependent: :destroy
   default_scope { order(name: :asc) }
   validates :name, uniqueness: true, presence: true
