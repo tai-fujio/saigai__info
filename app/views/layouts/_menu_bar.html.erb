@@ -1,0 +1,332 @@
+<div id="menubar">
+  <div class="items">
+    <% unless @map.nil? %>
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "street-view 3x fw",class: "fa-street-view" %>
+      <%= f.hidden_field :name, value: "fa fa-street-view fa-5x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>
+
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true,html: {class: 'marker_link'}) do |f| %>
+        <%= fa_icon "star 3x fw",class: "fa-star" %>
+        <%= f.hidden_field :name, value: "fa fa-star fa-3x " %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "home 3x fw",class: "fa-home" %>
+        <%= f.hidden_field :name, value: "fa fa-home  fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "flag 3x fw",class: "fa-flag" %>
+      <%= f.hidden_field :name, value: "fa fa-flag fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "cart-arrow-down 3x fw",class: "fa-cart-arrow-down" %>
+      <%= f.hidden_field :name, value: "fa fa-cart-arrow-down fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "cab 3x fw",class: "fa-cab" %>
+      <%= f.hidden_field :name, value: "fa fa-cab fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "building-o 3x fw",class: "fa-building-o" %>
+      <%= f.hidden_field :name, value: "fa fa-building-o fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "gas-pump 3x fw",class: "fa-gas-pump" %>
+      <%= f.hidden_field :name, value: "fas fa-gas-pump fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "phone-square 3x fw",class: "fa-phone-square" %>
+      <%= f.hidden_field :name, value: "fa fa-phone-square fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "battery-3 3x fw",class: "fa-battery-3" %>
+        <%= f.hidden_field :name, value: "fa fa-battery-3 fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "wifi 3x fw",class: "fa-wifi" %>
+        <%= f.hidden_field :name, value: "fa fa-wifi fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "bed 3x fw",class: "fa-bed" %>
+        <%= f.hidden_field :name, value: "fa fa-bed fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "restroom 3x fw",class: "fa-restroom" %>
+        <%= f.hidden_field :name, value: "fas fa-restroom fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "bathtub 3x fw",class: "fa-bathtub" %>
+        <%= f.hidden_field :name, value: "fa fa-bathtub fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "exclamation-triangle 3x fw",class: "fa-exclamation-triangle" %>
+        <%= f.hidden_field :name, value: "fa fa-exclamation-triangle fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "plus-square 3x fw",class: "fa-plus-square" %>
+        <%= f.hidden_field :name, value: "fa fa-plus-square fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "question-circle 3x fw",class: "fa-question-circle" %>
+        <%= f.hidden_field :name, value: "fa fa-question-circle fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "tint 3x fw",class: "fa-tint" %>
+        <%= f.hidden_field :name, value: "fa fa-tint fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "ambulance 3x fw",class: "fa-ambulance" %>
+        <%= f.hidden_field :name, value: "fa fa-ambulance fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "medkit 3x fw",class: "fa-medkit" %>
+      <%= f.hidden_field :name, value: "fa fa-medkit fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "check-square-o 3x fw",class: "fa-check-square-o" %>
+        <%= f.hidden_field :name, value: "fa fa-check-square-o fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "user-md 3x fw",class: "fa-user-md" %>
+        <%= f.hidden_field :name, value: "fa fa-user-md fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "heartbeat 3x fw",class: "fa-heartbeat" %>
+      <%= f.hidden_field :name, value: "fa fa-heartbeat fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "info-circle 3x fw",class: "fa-info-circle" %>
+        <%= f.hidden_field :name, value: "fa fa-info-circle fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+           <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "baby 3x fw",class: "fa-baby" %>
+        <%= f.hidden_field :name, value: "fas fa-baby fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "female 3x fw",class: "fa-female" %>
+        <%= f.hidden_field :name, value: "fa fa-female fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "child 3x fw",class: "fa-child" %>
+      <%= f.hidden_field :name, value: "fa fa-child fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "comment-o 3x fw",class: "fa-comment-o" %>
+      <%= f.hidden_field :name, value: "fa fa-comment-o fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "fire 3x fw",class: "fa-fire" %>
+      <%= f.hidden_field :name, value: "fa fa-fire fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "ban 3x fw",class: "fa-ban" %>
+      <%= f.hidden_field :name, value: "fa fa-ban fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "map-marker 3x fw",class: "fa-map-marker" %>
+      <%= f.hidden_field :name, value: "fa fa-map-marker fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "close 3x fw",class: "fa-close" %>
+      <%= f.hidden_field :name, value: "fa fa-close fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+        <%= fa_icon "wheelchair 3x fw",class: "fa-wheelchair" %>
+        <%= f.hidden_field :name, value: "fa fa-wheelchair fa-3x" %>
+        <%= f.hidden_field :longitude %>
+        <%= f.hidden_field :latitude %>
+        <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+<%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "asl-interpreting 3x fw",class: "fa-asl-interpreting" %>
+      <%= f.hidden_field :name, value: "fa fa-asl-interpreting fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "assistive-listening-systems 3x fw",class: "fa-assistive-listening-systems" %>
+      <%= f.hidden_field :name, value: "fa fa-assistive-listening-systems fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>      
+
+    <div class = 'item'>
+      <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+      <%= fa_icon "paw 3x fw",class: "fa-paw" %>
+      <%= f.hidden_field :name, value: "fa fa-paw fa-3x" %>
+      <%= f.hidden_field :longitude %>
+      <%= f.hidden_field :latitude %>
+      <%= f.submit "地点登録"%>
+      <% end %>
+    </div>  
+    <% end %>
+  </div>
+</div>
