@@ -21,8 +21,8 @@ class SitesController < ApplicationController
   def show
     @site = Site.find(params[:id])
     @map = Map.find(@site.map_id)
-    @review = @site.reviews.build
-    @reviews = @site.reviews
+    @comment = @site.comments.build
+    @comments = @site.comments
     respond_to do |format|
       format.js{render :index}
     end
@@ -34,7 +34,7 @@ class SitesController < ApplicationController
     @site.update(site_params)
     respond_to do |format|
       format.js{render :update_site}
-      # format.js{'index_review.js.erb'}
+      # format.js{'index_comment.js.erb'}
     end
   end
 
