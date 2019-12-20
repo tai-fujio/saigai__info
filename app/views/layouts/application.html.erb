@@ -11,6 +11,8 @@
   </head>
 
   <body>
+    <%= render 'layouts/menu_bar' %>
+    <%= render 'layouts/right_bar' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
