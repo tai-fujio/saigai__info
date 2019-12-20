@@ -1,3 +1,5 @@
+server '54.95.138.106', user: 'app', roles: %w{app db web}
+set :ssh_options, keys: '/Users/fujio/.ssh/id_rsa'
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
