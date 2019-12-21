@@ -4,16 +4,13 @@ class SitesController < ApplicationController
   def create
     @map = Map.find(params[:map_id])
     @site = @map.sites.build(site_params)
-    # map_id = params[:map_id]
-    # @site.map_id = map_id
-    binding.irb
     @site.save
     redirect_to map_path(@map)
   end
 
   def new
     @map = Map.find(params[:map_id])
-    @site =@map.sites.build
+    @site = @map.sites.build
     respond_to do |format|
       format.js{render :index}
     end

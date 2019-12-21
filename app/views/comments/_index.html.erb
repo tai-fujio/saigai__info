@@ -1,15 +1,13 @@
 <div id="comments_index">
-<% define_check = defined? comments %>
-<% unless define_check.nil?%>
-  <% @site.comments.each do |comment|%>
-  <% unless comment.content.nil? || comment.created_at.nil? %>
-    <h3><%= comment.content %></h3>
-    <h5><%= time_ago_in_words(comment.created_at)+"前" %></h5><br>
-    <%= link_to '役立つ',reviews_count_path(comment,key: :good),remote: true %>
-    <%=comment.review.good%>
-    <%= link_to '役立たない',reviews_count_path(comment, key: :bad),remote: true %>
-    <%=comment.review.bad%>
+  <% define_check = defined? comments %>
+  <% unless define_check.nil?%>
+    <% site.comments.each do |comment|%>
+      <h3><%= comment.content %></h3>
+      <h5><%= time_ago_in_words(comment.created_at)+"前" %></h5><br>
+      <%= link_to '役立つ',reviews_count_path(comment,key: :good),remote: true %>
+      <%=comment.review.good%>
+      <%= link_to '役立たない',reviews_count_path(comment, key: :bad),remote: true %>
+      <%=comment.review.bad%>
+    <% end %>
   <% end %>
-  <% end %>
-<% end %>
 </div>

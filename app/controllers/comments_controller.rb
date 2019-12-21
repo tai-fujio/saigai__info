@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     @map = Map.find(@site.map_id)
     @comment =@site.comments.build
     respond_to do |format|
-      format.js{render :index_comment}
+      format.js{render :index}
     end
   end
   
@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
     @comments = Comment.all
     # head :no_content
     respond_to do |format|
-      format.js{render :index_comment}
+      format.js{render :index}
     end
   end
 
@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
     @review = Review.new(comment_id: @comment.id)
     @review.save
     respond_to do |format|
-      format.js{render :index_comment}
+      format.js{render :index}
     end
   end
 
