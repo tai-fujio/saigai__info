@@ -4,5 +4,5 @@ class Site < ApplicationRecord
   validates :name, presence: true
   validates :latitude, presence: true, uniqueness:{ scope: :longitude }
   validates :longitude, presence: true
-  validates :title, length:{minimum:6,maximum:20}
+  validates :title, length:{maximum:20}
 end

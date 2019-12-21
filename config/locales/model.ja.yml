@@ -1,17 +1,15 @@
 ja:
   activerecord:
     models:
-      blog: ブログ
-      user: ユーザー
       map: マップ
       site: 登録地点
       comment: コメント
       review: 評価
       key: セッションキー
     attributes:
-      blog:
+      map:
         name: 名前
-        password_digest: パスワード
+        password: パスワード
         creater: 作成者
       site:
         name: アイコン
@@ -21,7 +19,7 @@ ja:
       comment:
         content: 内容
       review:
-        good: 役立つ
-        bad: 役立たない
+        good: 役立つボタン
+        bad: 役立たないボタン
       key:
         value: コード

@@ -39,7 +39,7 @@ gem 'awesome_print'
 gem 'bcrypt_pbkdf'
 gem 'dotenv-rails'
 gem 'ed25519'
-gem "font-awesome-rails"
+# gem "font-awesome-rails"
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'

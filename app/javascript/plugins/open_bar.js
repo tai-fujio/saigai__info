@@ -1,5 +1,5 @@
 const openBar = () => {
-  document.getElementById("sidebar_site").style.width = "25%";
+  document.getElementById("right_bar").style.width = "25%";
 };
 
 export { openBar };

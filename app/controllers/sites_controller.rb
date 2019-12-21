@@ -6,6 +6,7 @@ class SitesController < ApplicationController
     @site = @map.sites.build(site_params)
     # map_id = params[:map_id]
     # @site.map_id = map_id
+    binding.irb
     @site.save
     redirect_to map_path(@map)
   end

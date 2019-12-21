@@ -9,8 +9,8 @@ const initMap = () => {
   if (mapDiv) {
     mapboxgl.accessToken = process.env.MAPBOX_API_KEY
     const markers = JSON.parse(mapDiv.dataset.markers);
-    // #サイト未登録の場合
     if(markers.length <2){
+      // #サイト未登録の場合
       window.map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v9',
@@ -67,21 +67,20 @@ const initMap = () => {
       trackUserLocation: true
       }));
 
-    const sidebar_open = () => {
-      const markers = document.getElementsByClassName("mapboxgl-marker");
-      for( var i = 0 ,l = markers.length; i < l ; i++ ) {
-        var marker = markers[i] ;
-        marker.addEventListener("click", openBar ,false)
+      const rightbar_open = () => {
+        const markers = document.getElementsByClassName("mapboxgl-marker");
+        for( var i = 0 ,l = markers.length; i < l ; i++ ) {
+          var marker = markers[i] ;
+          marker.addEventListener("click", openBar ,false)
+          };
         };
+      rightbar_open();
+
+      const sidebar_close = () => {
+        const closeButton = document.getElementById("close-nav");
+        closeButton.addEventListener("click", closeBar ,false)
       };
-    sidebar_open();
-
-    const sidebar_close = () => {
-      const closeButton = document.getElementById("close-nav");
-      closeButton.addEventListener("click", closeBar ,false)
-    };
-    sidebar_close();
-
+      sidebar_close();
     };
   };
 };

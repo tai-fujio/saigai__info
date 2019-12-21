@@ -103,8 +103,6 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.9.25)
-    font-awesome-rails (4.7.0.5)
-      railties (>= 3.2, < 6.1)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
     globalid (0.4.2)
@@ -132,7 +130,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
-    mapbox-gl-rails (1.6.0)
+    mapbox-gl-rails (1.6.1)
       railties (>= 3.2)
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
@@ -263,7 +261,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   dotenv-rails
   ed25519
-  font-awesome-rails
   font-awesome-sass (~> 5.6.1)
   jbuilder (~> 2.5)
   jquery-rails

@@ -7,7 +7,7 @@ const placeMarker = (map, markers) => {
     element.setAttribute(`data-remote`,`true`);
     element.className = marker.name;
     new mapboxgl.Marker(element)
-      .setLngLat([ marker.lng, marker.lat])
+      .setLngLat([ marker.lng, marker.lat ])
       .addTo(map);
     });
   };
