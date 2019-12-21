@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'votes/count'
   resources :maps do
     resources :sites do
-      resources :reviews do
+      resources :comments do
       end
     end
   end
