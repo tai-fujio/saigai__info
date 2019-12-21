@@ -7,7 +7,7 @@ import { closeBar } from './close_bar';
 const initMap = () => {
   const mapDiv = document.getElementById('map');
   if (mapDiv) {
-    mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
+    mapboxgl.accessToken = process.env.MAPBOX_API_KEY
     const markers = JSON.parse(mapDiv.dataset.markers);
     // #サイト未登録の場合
     if(markers.length <2){
@@ -32,6 +32,19 @@ const initMap = () => {
       },
       trackUserLocation: true
       }));
+
+      const user_info = () => {
+        $("#user_info").fadeIn(300);
+        $("#ok_btn").click(function(){
+          $("#user_info").fadeOut(300);
+        });
+      };
+      
+      $("#map").one('mousemove', function () {
+        setTimeout(function(){
+          user_info();
+        },1000);
+      });
 
     }else{
       // #サイトが登録してある場合
@@ -58,7 +71,7 @@ const initMap = () => {
       const markers = document.getElementsByClassName("mapboxgl-marker");
       for( var i = 0 ,l = markers.length; i < l ; i++ ) {
         var marker = markers[i] ;
-        marker.addEventListener("click", openRightBar ,false)
+        marker.addEventListener("click", openBar ,false)
         };
       };
     sidebar_open();

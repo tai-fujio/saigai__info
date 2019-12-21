@@ -9,6 +9,7 @@ body div a {
 #my_map{
   text-align: center;
 }
+
 #map {
   list-style: none;
   position: absolute;
@@ -16,6 +17,36 @@ body div a {
   bottom: 0;
   width: 100%;
   z-index: 1;
+}
+
+#user_info {
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+  background:rgba(0, 0, 0, .4);
+  z-index:3;
+}
+
+#alert_box {
+	margin:200px auto 0;
+	text-align:center;
+	padding-top:25px;
+	width:35%;
+	height:20%;
+	background:#FFF;
+	border-radius:5px;
+}
+
+#ok_btn{
+	cursor:pointer;
+	border:none;
+	color:#FFF;
+  background-color:#45ABB5;
+	border-radius:3px;
+  outline:none;
+  padding:5px 20px;
 }
 
 #info {
