@@ -2,11 +2,9 @@
   <% define_check = defined? site %>
   <% unless define_check.nil? %>
     <%= form_with(model:[map,site,comment],remote:true,method: :post) do |form| %>
-      <div class="field">
+      <div id="comment_field">
         <%= form.label :content, "内容" %><br>
-        <%= form.text_area :content, size: "30x4"%>
-      </div>
-      <div class="actions">
+        <%= form.text_area :content, size: "30x4", placeholder: "140文字以内で入力"%>
         <%= form.submit %>
       </div>
     <% end %>

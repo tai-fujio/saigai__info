@@ -43,7 +43,7 @@ body div a {
 	margin:200px auto 0;
 	text-align:center;
 	padding-top:25px;
-	width:35%;
+	width:30%;
 	height:20%;
 	background:#FFF;
 	border-radius:5px;
@@ -147,12 +147,23 @@ transition: 0.5s;
   right:0;
   }
 
-  #comment_content {
+  #comment_field {
+    margin: 2%;
+    font-size: 14pt;
+    display: block;
+  }
+
+  #comment_content{
+    width: 95%;
+    font-size: 14pt;
+  }
+
+  #comment_show {
+    margin: 2%;
     font-size: 14pt;
     display: block;
     overflow: scroll;
     word-break: break-all;
-    height: 10%";
 }
   .fa-star,.fa-home,.fa-flag{
     color: orange;

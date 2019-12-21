@@ -5,6 +5,6 @@
     </div>
     <%#= render 'sites/show' ,site:@site %>
     <%= render 'comments/new' ,locals:{site:@site,map:@map,comment:@comment} %>
-    <%= render 'comments/index',spacer_template: 'separator',locals:{comments:@comments,site:@site} %>
+    <%= render 'comments/index',locals:{comments:@comments,site:@site} %>
   </div>
 </div>

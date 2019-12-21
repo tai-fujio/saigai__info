@@ -3,7 +3,7 @@
   <% unless define_check.nil?%>
     <% site.comments.each do |comment|%>
       <% unless comment.id.nil? %>
-        <div id = "comment_content">
+        <div id = "comment_show">
           <h3><%= comment.content %></h3>
           <h5><%= time_ago_in_words(comment.created_at)+"前" %></h5><br>
           <%= link_to '役立つ',reviews_count_path(comment,key: :good),remote: true %>
