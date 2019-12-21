@@ -1,4 +1,10 @@
 document.getElementById("map").onclick = function(e){
+  const user_info = () => {
+    $("#click_info").fadeIn(300);
+    $("#click_info").fadeOut(1000);
+    };
+    user_info();
+
   var coordinates = document.getElementsByTagName("pre").info.innerHTML
   var lng_index = coordinates.indexOf("lng");
   var lat_index = coordinates.indexOf("lat");

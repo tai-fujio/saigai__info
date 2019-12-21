@@ -19,7 +19,17 @@ body div a {
   z-index: 1;
 }
 
-#user_info {
+#init_info {
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+  background:rgba(0, 0, 0, .4);
+  z-index:3;
+}
+
+#click_info {
 	position:fixed;
 	left:0;
 	top:0;
@@ -35,6 +45,16 @@ body div a {
 	padding-top:25px;
 	width:35%;
 	height:20%;
+	background:#FFF;
+	border-radius:5px;
+}
+
+#notice_box {
+	margin:200px auto 0;
+	text-align:center;
+	padding-top:25px;
+	width:25%;
+	height:10%;
 	background:#FFF;
 	border-radius:5px;
 }

@@ -1,5 +1,6 @@
 import 'mapbox-gl/dist/mapbox-gl.css';
 import {initMap} from '../plugins/init_map';
 import '../plugins/register_site';
-$("#user_info").hide();
+$("#init_info").hide();
+$("#click_info").hide();
 initMap();

@@ -34,9 +34,9 @@ const initMap = () => {
       }));
 
       const user_info = () => {
-        $("#user_info").fadeIn(300);
+        $("#init_info").fadeIn(300);
         $("#ok_btn").click(function(){
-          $("#user_info").fadeOut(300);
+          $("#init_info").fadeOut(300);
         });
       };
       
