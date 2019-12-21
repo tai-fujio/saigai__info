@@ -1,15 +1,15 @@
 import mapboxgl from 'mapbox-gl';
 import { placeMarker } from './place_marker';
 import { fitMap } from './fit_map';
-import { openRightBar } from './open_sidebar'
-import { closeBar } from './close_sidebar';
+import { openBar } from './open_bar';
+import { closeBar } from './close_bar';
 
 const initMap = () => {
   const mapDiv = document.getElementById('map');
-  // #サイト未登録の場合
   if (mapDiv) {
-    mapboxgl.accessToken = ENV["MAPBOX_API_KEY"];
+    mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
     const markers = JSON.parse(mapDiv.dataset.markers);
+    // #サイト未登録の場合
     if(markers.length <2){
       window.map = new mapboxgl.Map({
         container: 'map',

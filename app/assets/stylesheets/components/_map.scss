@@ -1,0 +1,120 @@
+body{
+  list-style: none;
+}
+
+body div a {
+  text-decoration: none;
+}
+
+#my_map{
+  text-align: center;
+}
+#map {
+  list-style: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#info {
+visibility: hidden !important;
+display: block;
+position: relative;
+margin: 0px auto;
+width: 50%;
+padding: 10px;
+border: none;
+border-radius: 3px;
+font-size: 12px;
+text-align: center;
+color: #222;
+background: #fff;
+z-index:1;
+}
+
+#menu_bar {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 100%;
+width: 7%;
+min-width:80px;
+position: fixed; 
+z-index: 2;
+top: 0;
+left: 0;
+background: white;
+overflow-x: hidden;
+transition: 0.5s;
+}
+
+.container{
+  width:100%;
+  height:100%;
+}
+
+#right_bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95%;
+  width: 0%;
+  position: fixed; 
+  z-index: 3;
+  top: 5%;
+  right: 0;
+  // background: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  word-break: break-all;
+  }
+
+  #sites_show{
+  background-color: white;
+  top:3%;
+  right:3%;
+  }
+
+  .items{
+  height:100%;
+  width:100%
+  }
+
+  .item{
+  margin:10%;
+  left:15%;
+  }
+
+  .close_btn{
+  width: 1%;
+  top:0;
+  right:0;
+  }
+
+  #comment_content {
+    font-size:16pt;
+}
+  .fa-star,.fa-home,.fa-flag{
+    color: orange;
+  }
+
+  .fa-bed,.fa-wifi,.fa-check-square-o,.fa-battery-3,.fa-street-view,.fa-cart-arrow-down,.fa-cab,.fa-comment-o,.fa-phone-square,.fa-gas-pump,.fa-building-o,.fa-restroom{
+    color: black;
+  }
+
+  .fa-baby,.fa-tint,.fa-bathtub,.fa-child,.fa-question-circle,.fa-info-circle{
+    color: blue;
+  }
+
+  .fa-exclamation-triangle,.fa-plus-square,.fa-female,.fa-heartbeat,.fa-ambulance,.fa-user-md,.fa-medkit,.fa-map-marker,.fa-ban,.fa-close,.fa-fire{
+    color: red;
+  }
+
+  .fa-asl-interpreting,.fa-assistive-listening-systems,.fa-wheelchair{
+    color: green;
+  }
+  .fa-paw{
+    color:palevioletred;
+  }
