@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'maps#index'
-  get 'votes/count'
+  get 'reviews/count'
   resources :maps do
     resources :sites do
       resources :comments do

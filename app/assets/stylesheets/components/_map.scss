@@ -148,7 +148,11 @@ transition: 0.5s;
   }
 
   #comment_content {
-    font-size:16pt;
+    font-size: 14pt;
+    display: block;
+    overflow: scroll;
+    word-break: break-all;
+    height: 10%";
 }
   .fa-star,.fa-home,.fa-flag{
     color: orange;

@@ -1,7 +1,7 @@
 if(typeof jQuery != "undefined"){
 $(function(){
 
-  $("#comments_index").html("<%= j(render 'comments/index', { comments: @comments }) %>")
+  $("#comments_index").html("<%= j(render 'comments/index', { comments: @comments,site:@site}) %>")
 
   $("textarea").val("");
   });

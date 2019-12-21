@@ -3,7 +3,7 @@
   <% unless define_check.nil? %>
     <%= form_with(model:[map,site,comment],remote:true,method: :post) do |form| %>
       <div class="field">
-        <%= form.label :content, "内容" %>
+        <%= form.label :content, "内容" %><br>
         <%= form.text_area :content, size: "30x4"%>
       </div>
       <div class="actions">

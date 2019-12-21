@@ -9,7 +9,6 @@
       <h3>名称: <%=site.title%></h3>
     <% else %>
     <h5>名称を登録する</h5>
-      <%= :notice %>
       <%= form_with(model:@site,url:map_site_path(@site),remote: true,method: :patch) do |form| %>
         <%= form.label :title, "名称" %>
         <%= form.text_field :title %>

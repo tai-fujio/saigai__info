@@ -4,7 +4,7 @@ if(typeof jQuery != "undefined"){
     
     $("#comments_new").html("<%= j(render 'comments/new',{map:@map,site:@site,comment:@comment}) %>")
 
-    $("#comments_index").html("<%= j(render 'reviews/index',{comments:@comments}) %>")
+    $("#comments_index").html("<%= j(render 'comments/index',{comments:@comments,site:@site}) %>")
 
     $("textarea").val("");
     });
