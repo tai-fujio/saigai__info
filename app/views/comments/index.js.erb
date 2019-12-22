@@ -2,7 +2,7 @@ if(typeof jQuery != "undefined"){
 $(function(){
 
   $("#comments_index").html("<%= j(render 'comments/index', { comments: @comments,site:@site}) %>")
-  $('#notice_area').html("<%= j(render 'message') %>");
+  $('#comments_validation').html("<%= j(render 'message') %>");
 
   $("textarea").val("");
   });

@@ -31,7 +31,6 @@ body div a {
 	top:0;
 	height:100%;
 	width:100%;
-  background:rgba(0, 0, 0, .4);
   z-index:3;
 }
 
@@ -53,7 +52,7 @@ body div a {
 	text-align:center;
 	padding-top:25px;
 	width:20%;
-	height:10%;
+	height:13%;
 	background:#FFF;
 	border-radius:5px;
 }
@@ -164,7 +163,11 @@ transition: 0.5s;
   right:0;
   }
 
-  #notice_area {
+  #comments_validation {
+    text-indent: -1.5rem;
+  }
+
+  #sites_validation {
     text-indent: -1.5rem;
   }
   

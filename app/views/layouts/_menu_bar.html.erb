@@ -84,7 +84,7 @@
     </div>
     <div class = 'item'>
       <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
-        <%= icon('fas','fa-battery-three-quarters',class: "fa-3x fa-fw fa-battery-three-quarters" )%>
+        <%= icon('fas','battery-three-quarters',class: "fa-3x fa-fw fa-battery-three-quarters" )%>
         <%= f.hidden_field :name, value: "fas fa-battery-3 fa-3x" %>
         <%= f.hidden_field :longitude %>
         <%= f.hidden_field :latitude %>

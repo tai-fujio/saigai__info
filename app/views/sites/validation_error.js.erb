@@ -1,0 +1,7 @@
+if(typeof jQuery != "undefined"){
+  $(function(){
+    $('#sites_validation').html("<%= j(render 'message') %>");
+    
+    $("textarea").val("");
+    });
+  }

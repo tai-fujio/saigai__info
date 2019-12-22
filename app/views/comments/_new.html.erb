@@ -1,13 +1,13 @@
 <div id="comments_new">
   <% define_check = defined? site %>
   <% unless define_check.nil? %>
-    <div id = "notice_area">
+    <div id = "comments_validation">
     </div>
     <%= form_with(model:[map,site,comment],remote:true,method: :post) do |form| %>
       <div id="comment_field">
         <%= form.label :content, "コメントを入力" %>
         <%= form.text_area :content, size: "30x4", placeholder: "140文字以内で入力"%>
-        <%= form.submit "投稿する"%>
+        <%= form.submit "コメントする"%>
       </div>
     <% end %>
   <%  end %>

@@ -30,9 +30,14 @@ class SitesController < ApplicationController
     @site = Site.find(params[:id])
     @map = Map.find(@site.map_id)
     @site.update(site_params)
+    if @site.invalid?
+      respond_to do |format|
+        format.js{render :validation_error and return}
+      end
+    end
+
     respond_to do |format|
-      format.js{render :update_site}
-      # format.js{'index_comment.js.erb'}
+      format.js{render :update_site and return}
     end
   end
 
