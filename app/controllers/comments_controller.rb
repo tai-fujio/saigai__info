@@ -28,11 +28,6 @@ class CommentsController < ApplicationController
       @review = Review.new(comment_id: @comment.id)
       @review.save
     end
-    # if @comment.errors.any?
-    #   @comment.errors.full_messages.each do |message|
-    #     flash.now[:notice] = message
-    #   end
-    # end
     respond_to do |format|
       format.js{render :index }
     end

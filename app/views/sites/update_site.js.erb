@@ -1,5 +1,7 @@
 if(typeof jQuery != "undefined"){
   $(function(){
+    $('#notice_message').html("<%= j(render 'layouts/notice') %>");
+
     $("#sites_show").html("<%= j(render 'sites/show',{site:@site}) %>")
     
     $("textarea").val("");

@@ -8,13 +8,13 @@ class SitesController < ApplicationController
     redirect_to map_path(@map)
   end
 
-  def new
-    @map = Map.find(params[:map_id])
-    @site = @map.sites.build
-    respond_to do |format|
-      format.js{render :index}
-    end
-  end
+  # def new
+  #   @map = Map.find(params[:map_id])
+  #   @site = @map.sites.build
+  #   respond_to do |format|
+  #     format.js{render :index}
+  #   end
+  # end
 
   def show
     @site = Site.find(params[:id])
@@ -35,7 +35,6 @@ class SitesController < ApplicationController
         format.js{render :validation_error and return}
       end
     end
-
     respond_to do |format|
       format.js{render :update_site and return}
     end

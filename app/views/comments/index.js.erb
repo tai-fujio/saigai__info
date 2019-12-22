@@ -4,6 +4,8 @@ $(function(){
   $("#comments_index").html("<%= j(render 'comments/index', { comments: @comments,site:@site}) %>")
   $('#comments_validation').html("<%= j(render 'message') %>");
 
+  $('#notice_message').html("<%= j(render 'layouts/notice') %>");
+
   $("textarea").val("");
   });
 }
