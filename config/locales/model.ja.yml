@@ -17,7 +17,7 @@ ja:
         longitude: 経度
         title: 名称
       comment:
-        content: 内容
+        content: コメント
       review:
         good: 役立つボタン
         bad: 役立たないボタン

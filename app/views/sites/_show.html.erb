@@ -1,18 +1,16 @@
 <div id = "sites_show">
-  <% flash.each do |key, value| %>
-    <%= content_tag(:div, value, class: "#{key}") %>
-  <% end %>
-    <h3>マップ名: <%=@site.map.name%></h3>
-    <h5> マップ作成者: <%=@site.map.name%></h3><br>
-  <% if site&.id != nil %>
+  <h3>マップ名: <%=@site&.map.name%></h3>
+  <h5> マップ作成者: <%=@site&.map.name%></h3>
+  <% define_check = defined? site %>
+  <% unless define_check.nil? %>
     <% if site.title != nil %>
       <h3>名称: <%=site.title%></h3>
     <% else %>
-    <h5>名称を登録する</h5>
+      <h5>名称を登録できます</h5>
       <%= form_with(model:@site,url:map_site_path(@site),remote: true,method: :patch) do |form| %>
         <%= form.label :title, "名称" %>
         <%= form.text_field :title %>
-        <%= form.submit %>
+        <%= form.submit "登録する" %>
       <% end %>
     <% end %>
   <% end %>
