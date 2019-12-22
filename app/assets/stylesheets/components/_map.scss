@@ -46,10 +46,13 @@ body div a {
 }
 
 #notice_box {
+  position: absolute;
+  left: 15%;
+  top: -15%;
 	margin:200px auto 0;
 	text-align:center;
 	padding-top:25px;
-	width:25%;
+	width:20%;
 	height:10%;
 	background:#FFF;
 	border-radius:5px;

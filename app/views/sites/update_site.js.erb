@@ -1,0 +1,7 @@
+if(typeof jQuery != "undefined"){
+  $(function(){
+    $("#sites_show").html("<%= j(render 'sites/show',{site:@site}) %>")
+    
+    $("textarea").val("");
+    });
+  }

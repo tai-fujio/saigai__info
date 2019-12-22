@@ -38,6 +38,6 @@ class SitesController < ApplicationController
 
   private
   def site_params
-    params.require(:site).permit(:id,:name,:latitude,:longitude,:description)
+    params.require(:site).permit(:id,:name,:latitude,:longitude,:description,:title)
   end
 end
