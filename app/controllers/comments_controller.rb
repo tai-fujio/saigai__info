@@ -31,12 +31,11 @@ class CommentsController < ApplicationController
       @comment.save
       @review = Review.new(comment_id: @comment.id)
       @review.save
-    end
-    respond_to do |format|
-      format.js{render :index }
+      respond_to do |format|
+        format.js{render :index and return}
+      end
     end
   end
-
   private
   def comment_params
     params.require(:comment).permit(:content,:site_id)

@@ -1,8 +1,9 @@
 class ReviewsController < ApplicationController
   protect_from_forgery except: [:count]
   def count
-    @comment = Comment.find(params[:id])
+    @comment = Comment.find(params[:comment_id])
     @review = Review.find(@comment.review.id)
+    @site = Site.find(@comment.site_id)
     if params[:key] == "good"
       @review.increment(:good)
       @key = Key.new(value: session[:session_id])

@@ -1,23 +1,22 @@
 
-  <% define_check = defined? comments %>
+  <% define_check = defined? site %>
   <% unless define_check.nil?%>
     <% site.comments.each do |comment|%>
       <% unless comment.id.nil? %>
         <div id = "comment_show">
           <h3><%= comment.content %></h3>
           <h5><%= time_ago_in_words(comment.created_at)+"前" %></h5><br>
-            <div id = "reviews_validation"></div>
               <%= link_to '役立つ',reviews_count_path(key: :good, comment_id: comment), method: :post,remote: true %>
               <div id = "reviews_show">
                 <%=comment.review.good%>
               </div>
-              <%= link_to '役立たない',reviews_count_path(comment, key: :bad), method: :post, remote: true %>
+              <%= link_to '役立たない',reviews_count_path(key: :bad,comment_id: comment), method: :post, remote: true %>
               <div id = "reviews_show">
                 <%=comment.review.bad%>
               </div>
             </div>
           </div>
-        </div><hr />
+        </div><hr/>
       <% end %>
     <% end %>
   <% end %>

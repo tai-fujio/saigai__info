@@ -68,14 +68,14 @@ body div a {
 	border-radius:5px;
 }
 
-#ok_btn{
+.ok_btn{
 	cursor:pointer;
 	border:none;
 	color:#FFF;
   background-color:#45ABB5;
-	border-radius:3px;
+	border-radius:5px;
   outline:none;
-  padding:5px 20px;
+  padding:1px 10px;
 }
 
 #info {
@@ -119,6 +119,7 @@ transition: 0.5s;
 }
 
 #right_bar{
+  border-radius:7px;
   display:flex;
   flex-direction: column;
   justify-content: space-between;
@@ -136,15 +137,17 @@ transition: 0.5s;
 
   #right_bar_head{
     height: auto;
-    background-color: white;
+    background-color: rgb(230,228,224);
     position: absolute;
   }
 
   #right_bar_bottom{
     color: white;
+    margin-top: 420px;
   }
 
   #sites_show{
+  border-radius:7px;
   background-color:white;
   color: black;
   width:95%;
@@ -194,7 +197,7 @@ transition: 0.5s;
     font-size: 14pt;
   }
 
-  #comment_show {
+  #comments_show {
     margin: 2%;
     font-size: 14pt;
     display: block;

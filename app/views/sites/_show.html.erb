@@ -1,12 +1,11 @@
 <div id = "sites_show">
-  <h5>Map名: <%=@site&.map.name%></h5>
-  <h5> Map作成者: <%=@site&.map.name%></h3>
+  <h5>Map名: <%=@site&.map.name%><br>Map作成者: <%=@site&.map.name%></h3>
   <% define_check = defined? site %>
   <% unless define_check.nil? %>
     <% if site.title != nil %>
       <h3>この地点の名前: <%=site.title%></h3>
     <% else %>
-      <h5>名前を登録できます</h5>
+      <h5>この地点に名前を登録できます</h5>
       <%= form_with(model:@site,url:map_site_path(@site),remote: true,method: :patch) do |form| %>
         <%= form.label :title, "名前" %>
         <%= form.text_field :title %>
