@@ -1,0 +1,6 @@
+if(typeof jQuery != "undefined"){
+  $(function(){
+    $("#reviews_show").html("<%= j(render 'show',{comment:@comment}) %>")
+    });
+    $('#reviews_validation').html("");
+  }

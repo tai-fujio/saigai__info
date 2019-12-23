@@ -1,4 +1,4 @@
 class Key < ApplicationRecord
   belongs_to :review
-  validates :value, uniqueness: true, presence: true
+  validates :value, uniqueness:{ scope: :review_id }, presence: true
 end

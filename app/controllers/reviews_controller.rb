@@ -1,9 +1,8 @@
 class ReviewsController < ApplicationController
+  protect_from_forgery except: [:count]
   def count
-    @comment = Comment.find(params[:format])
-    @site = Site.find(@comment.site_id)
+    @comment = Comment.find(params[:id])
     @review = Review.find(@comment.review.id)
-    @comments = @site.comments
     if params[:key] == "good"
       @review.increment(:good)
       @key = Key.new(value: session[:session_id])
@@ -11,14 +10,31 @@ class ReviewsController < ApplicationController
     elsif params[:key] == "bad"
       @review.increment(:bad)
       @key = Key.new(value: session[:session_id])
-      @key.review_id = @vote.id
+      @key.review_id = @review.id
     end
-    if @key.valid?
+    if @key.invalid?
+      respond_to do |format|
+        format.js{render :validation_error}
+      end
+    else
       @review.save
       @key.save
-    else
-      flash.now[:notice] = "評価できません"
+      respond_to do |format|
+        format.js{render :show}
+      end
     end
+    # if @comment.invalid?
+    #   respond_to do |format|
+    #     format.js{render :validation_error and return}
+    #   end
+    # else
+    #   @comment.save
+    #   @review = Review.new(comment_id: @comment.id)
+    #   @review.save
+    # end
+    # respond_to do |format|
+    #   format.js{render :index }
+    # end
     # session[:session_id]
     # respond_to do |format|
     # format.html {flash.now[:notice]="!!!"}
