@@ -1,16 +1,32 @@
 <body id = "maps_index">
-  <h1>マップをつくる</h1>
+  <h2>マップをつくる</h2>
+  <div class ="maps_validation">
+    <% @map.errors.full_messages.each do |msg| %>
+      <ul>
+        <%= "※"+msg %>
+      </ul>
+    <% end %>
+  </div>
+  <table>
   <%=form_with(model:@map,local:true) do |f|%>
-    <%=f.label :name %>
-    <%=f.text_field :name %>
-    <%=f.label :password %>
-    <%=f.password_field :password %>
-    <%=f.label :password_confirmation %>
-    <%=f.password_field :password_confirmation %>
-    <%=f.label :creater %>
-    <%=f.password_field :creater %>
-    <%=f.submit %>
+    <tr>
+      <td><%=f.label :name %></td>
+      <td><%=f.text_field :name, size:"40"%></td>
+    </tr>
+    <tr>
+      <td><%=f.label :password %></td>
+      <td><%=f.password_field :password ,placeholder: "６文字以上で入力",  size:"40"%>
+      <td><h5>&nbsp;※地図情報管理の際に必要です</h5></td>
+    </tr>
+    <tr>
+      <td><%=f.label :password_confirmation %>&nbsp;&nbsp;&nbsp;</td>
+      <td><%=f.password_field :password_confirmation,placeholder: "６文字以上で再度入力",size:"40"%></td>
+    </tr>
+    <tr>
+      <td><%=f.label :creater %></td>
+      <td><%=f.password_field :creater ,placeholder: "入力は任意",size:"40" %></td>
+    </tr>
+  </table><br>
+    <%=f.submit("つくる",class:"button")%>
   <% end %>
-  <button id="click">マップをみる</button>
-  <button id="click">マップをつくる</button>
 </body>

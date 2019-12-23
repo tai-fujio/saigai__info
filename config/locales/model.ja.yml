@@ -8,8 +8,9 @@ ja:
       key: セッションキー
     attributes:
       map:
-        name: 名前
+        name: マップ名
         password: パスワード
+        password_confirmation: パスワード確認
         creater: 作成者
       site:
         name: アイコン

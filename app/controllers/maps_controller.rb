@@ -40,14 +40,13 @@ class MapsController < ApplicationController
       flash[:notice] = "マップを作成しました"
       redirect_to root_path
     else
-      flash.now[:notice] = "マップの作成ができませんでした"
       render :new
     end
   end
 
   private
   def map_params
-    params.require(:map).permit(:name,:password,:creater)
+    params.require(:map).permit(:name,:password,:password_confirmation,creater)
   end
 
 end
