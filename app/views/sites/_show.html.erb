@@ -7,13 +7,13 @@
       <h3>この地点の名前: <%=site.title%></h3>
     <% else %>
       <h5>名前を登録できます</h5>
-      <div id = "sites_validation">
-      </div>
       <%= form_with(model:@site,url:map_site_path(@site),remote: true,method: :patch) do |form| %>
         <%= form.label :title, "名前" %>
         <%= form.text_field :title %>
         <%= form.submit "登録する" %>
       <% end %>
     <% end %>
+    <div id = "sites_validation">
+    </div>
   <% end %>
 </div>

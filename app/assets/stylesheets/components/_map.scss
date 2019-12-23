@@ -124,13 +124,12 @@ transition: 0.5s;
   }
 
   #right_bar_head{
-    position: fixed;
     height: auto;
     background-color: white;
+    position: absolute;
   }
 
   #right_bar_bottom{
-    margin-top: 110%;
     color: white;
   }
 

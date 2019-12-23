@@ -43,7 +43,7 @@ const initMap = () => {
       $("#map").one('mousemove', function () {
         setTimeout(function(){
           user_info();
-        },1000);
+        },700);
       });
 
     }else{
@@ -67,20 +67,20 @@ const initMap = () => {
       trackUserLocation: true
       }));
 
-      const rightbar_open = () => {
+      const rightbarOpen = () => {
         const markers = document.getElementsByClassName("mapboxgl-marker");
         for( var i = 0 ,l = markers.length; i < l ; i++ ) {
           var marker = markers[i] ;
           marker.addEventListener("click", openBar ,false)
           };
         };
-      rightbar_open();
+      rightbarOpen();
 
-      const sidebar_close = () => {
+      const sidebarClose = () => {
         const closeButton = document.getElementById("close-nav");
         closeButton.addEventListener("click", closeBar ,false)
       };
-      sidebar_close();
+      sidebarClose();
     };
   };
 };

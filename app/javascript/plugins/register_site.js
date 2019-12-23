@@ -1,4 +1,4 @@
-document.getElementById("map").onclick = function(e){
+document.getElementById("map").ondblclick = function(e){
   const user_info = () => {
     $("#click_info").fadeIn(300);
     $("#click_info").fadeOut(1000);

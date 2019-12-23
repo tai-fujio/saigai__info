@@ -6,6 +6,8 @@ if(typeof jQuery != "undefined"){
 
     $("#comments_index").html("<%= j(render 'comments/index',{comments:@comments,site:@site}) %>")
 
+    $('#notice_message').html("");
+
     $("textarea").val("");
     });
   }

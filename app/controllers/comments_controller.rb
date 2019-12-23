@@ -23,7 +23,11 @@ class CommentsController < ApplicationController
     @map = Map.find(params[:map_id])
     @site = Site.find(params[:site_id])
     @comment = @site.comments.build(comment_params)
-    if
+    if @comment.invalid?
+      respond_to do |format|
+        format.js{render :validation_error and return}
+      end
+    else
       @comment.save
       @review = Review.new(comment_id: @comment.id)
       @review.save
