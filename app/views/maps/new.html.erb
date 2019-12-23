@@ -1,0 +1,16 @@
+<body id = "maps_index">
+  <h1>マップをつくる</h1>
+  <%=form_with(model:@map,local:true) do |f|%>
+    <%=f.label :name %>
+    <%=f.text_field :name %>
+    <%=f.label :password %>
+    <%=f.password_field :password %>
+    <%=f.label :password_confirmation %>
+    <%=f.password_field :password_confirmation %>
+    <%=f.label :creater %>
+    <%=f.password_field :creater %>
+    <%=f.submit %>
+  <% end %>
+  <button id="click">マップをみる</button>
+  <button id="click">マップをつくる</button>
+</body>

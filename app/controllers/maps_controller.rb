@@ -1,5 +1,7 @@
 class MapsController < ApplicationController
 
+  def root; end
+
   def sites
     @sites ||= @map.sites
   end
@@ -25,8 +27,27 @@ class MapsController < ApplicationController
     sites
     @all_sites = compose(@sites)
   end
-  def new;end
-  def create;end
+
   def destroy;end
+
+  def new
+    @map = Map.new
+  end
+
+  def create
+    @map = Map.new(map_params)
+    if @map.save
+      flash[:notice] = "マップを作成しました"
+      redirect_to root_path
+    else
+      flash.now[:notice] = "マップの作成ができませんでした"
+      render :new
+    end
+  end
+
+  private
+  def map_params
+    params.require(:map).permit(:name,:password,:creater)
+  end
 
 end

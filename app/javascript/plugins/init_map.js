@@ -39,7 +39,7 @@ const initMap = () => {
           $("#init_info").fadeOut(300);
         });
       };
-      
+
       $("#map").one('mousemove', function () {
         setTimeout(function(){
           user_info();

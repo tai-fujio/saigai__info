@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'maps#index'
+  root to: 'maps#root'
   post 'reviews/count'
   resources :maps do
     resources :sites do
