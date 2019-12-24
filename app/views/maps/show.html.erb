@@ -1,18 +1,18 @@
 <div id="my_map"><pre id='info'></pre>
-<i class="fa fa-spinner ">マップ表示準備中です</i>
+<i class="fa fa-spinner ">t(maps.update_now)</i>
 <div id='map' class = 'target' data-markers="<%= @all_sites.to_json %>"></div>
 </div>
 <div id="init_info">
   <div id="alert_box">
-    <p>初めに中心地点を登録してください</p>
-    <p>1.地図上をクリック</p>
-    <p>2.左のメニューからアイコンをクリック</p>
+    <p>t('maps.register_center')</p>
+    <p>t('maps.first_doubleclick')</p>
+    <p>t('maps.second_click_icon')</p>
     <button class="ok_btn">OK</button>
   </div>
 </div>
 <div id="click_info">
   <div id="notice_box">
-    <p>この地点を登録できます</p>
-    <p>メニューのアイコンを選んでください</p>
+    <p>t('maps.registerable')</p>
+    <p>t('maps.select_icon')</p>
   </div>
 </div>

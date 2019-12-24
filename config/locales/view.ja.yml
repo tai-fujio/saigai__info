@@ -1,0 +1,33 @@
+ja:
+  maps:
+    time_before: 前
+    helpful: 役立つ
+    not_helpful: 役立たない
+    input_comment: コメントを入力
+    within_140_characters: 140文字以内で入力
+    at_least_6_characters: 6文字以内で入力
+    reenter_password: ６文字以上で再度入力
+    comment: コメントする
+    register_site: 地点登録
+    to_map: 地図を
+    doubleclick: ダブルクリック
+    to_icon: アイコンを
+    click: クリック
+    registered: 登録されました
+    select_map: マップをみる
+    create_map: マップをつくる
+    necessary_to_admin: ※情報管理の際に必要です
+    user_definable: 入力は任意
+    create: つくる
+    update_now: マップ表示準備中
+    register_center: 初めに中心地点を登録してください
+    first_doubleclick: 1.地図上をダブルクリック
+    second_click_icon: 2.左のアイコンからボタンをクリック
+    registerable: この地点を登録できます
+    select_icon: アイコンから選んでください
+    map_name: Map名
+    map_creater: Map作成者
+    site_name: この地点の名前
+    name_site: この地点に名前を登録できます
+    name: 名前
+    register: 登録する

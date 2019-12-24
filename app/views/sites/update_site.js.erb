@@ -5,5 +5,7 @@ if(typeof jQuery != "undefined"){
     $("#sites_show").html("<%= j(render 'sites/show',{site:@site}) %>")
     
     $("textarea").val("");
+
+    $('#reviews_validation').html("");
     });
   }

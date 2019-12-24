@@ -1,7 +1,7 @@
 <% unless @map&.id.nil? %>
   <div id="menu_bar">
     <div class="direction_box">
-      <p>&lt;使いかた&gt;<br>地図を<br>ダブルクリック<br>↓<br>アイコンを<br>クリック</p>
+      <p>&lt;t('maps.register_site')&gt;<br>t('maps.to_map')<br>t('maps.doubleclick')<br>↓<br>t('maps.to_icon')<br>t('maps.click')</p>
     </div>
     <div class="items">
       <div class = 'item'>
@@ -10,7 +10,7 @@
           <%= f.hidden_field :name, value: "fa fa-street-view fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -19,7 +19,7 @@
           <%= f.hidden_field :name, value: "fa fa-star fa-5x " %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -28,7 +28,7 @@
           <%= f.hidden_field :name, value: "fa fa-home  fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -37,7 +37,7 @@
           <%= f.hidden_field :name, value: "fa fa-flag fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -46,7 +46,7 @@
           <%= f.hidden_field :name, value: "fa fa-tint fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -55,7 +55,7 @@
           <%= f.hidden_field :name, value: "fas fa-battery-3 fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
           <div class = 'item'>
@@ -64,7 +64,7 @@
           <%= f.hidden_field :name, value: "fa fa-bed fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -73,7 +73,7 @@
           <%= f.hidden_field :name, value: "fa fa-cart-arrow-down fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -82,7 +82,7 @@
           <%= f.hidden_field :name, value: "fas fa-gas-pump fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -91,7 +91,7 @@
           <%= f.hidden_field :name, value: "fa fa-phone-square fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -100,7 +100,7 @@
           <%= f.hidden_field :name, value: "fa fa-wifi fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -109,7 +109,7 @@
           <%= f.hidden_field :name, value: "fas fa-restroom fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -118,7 +118,7 @@
           <%= f.hidden_field :name, value: "fas fa-shower fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -127,7 +127,7 @@
           <%= f.hidden_field :name, value: "fas fa-bath fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -136,7 +136,7 @@
           <%= f.hidden_field :name, value: "fas fa-utensils fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -145,7 +145,7 @@
           <%= f.hidden_field :name, value: "fas fa-yen-sign fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -154,7 +154,7 @@
           <%= f.hidden_field :name, value: "fas fa-shipping-fast fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -163,7 +163,7 @@
           <%= f.hidden_field :name, value: "fas fa-charging-station fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -172,7 +172,7 @@
           <%= f.hidden_field :name, value: "fas fa-lightbulb fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -181,7 +181,7 @@
           <%= f.hidden_field :name, value: "far fa-building fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -190,7 +190,7 @@
           <%= f.hidden_field :name, value: "fas fa-subway fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -199,7 +199,7 @@
             <%= f.hidden_field :name, value: "fas fa-taxi fa-5x" %>
             <%= f.hidden_field :longitude %>
             <%= f.hidden_field :latitude %>
-            <%= f.submit("地点登録", class:'ok_btn')%>
+            <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -208,7 +208,7 @@
           <%= f.hidden_field :name, value: "fa fa-fire fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -217,7 +217,7 @@
           <%= f.hidden_field :name, value: "fa fa-ban fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -226,7 +226,7 @@
           <%= f.hidden_field :name, value: "fas fa-times-circle fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -235,7 +235,7 @@
           <%= f.hidden_field :name, value: "fa fa-exclamation-triangle fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -244,7 +244,7 @@
           <%= f.hidden_field :name, value: "far fa-check-square fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -253,7 +253,7 @@
           <%= f.hidden_field :name, value: "fa fa-info-circle fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -262,7 +262,7 @@
           <%= f.hidden_field :name, value: "fa fa-question-circle fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -271,7 +271,7 @@
           <%= f.hidden_field :name, value: "fa fa-people-carry fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -280,7 +280,7 @@
           <%= f.hidden_field :name, value: "far fa-comments fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -289,7 +289,7 @@
           <%= f.hidden_field :name, value: "fa fa-plus-square fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -298,7 +298,7 @@
           <%= f.hidden_field :name, value: "fa fa-ambulance fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -307,7 +307,7 @@
           <%= f.hidden_field :name, value: "fa fa-medkit fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -316,7 +316,7 @@
           <%= f.hidden_field :name, value: "fa fa-user-md fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -325,7 +325,7 @@
           <%= f.hidden_field :name, value: "fa fa-heartbeat fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -334,7 +334,7 @@
           <%= f.hidden_field :name, value: "fa fa-female fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -343,7 +343,7 @@
           <%= f.hidden_field :name, value: "fa fa-child fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -352,7 +352,7 @@
           <%= f.hidden_field :name, value: "fas fa-baby fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -361,7 +361,7 @@
           <%= f.hidden_field :name, value: "fa fa-baby-carriage fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
       <div class = 'item'>
@@ -370,7 +370,7 @@
           <%= f.hidden_field :name, value: "fa fa-wheelchair fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>      
       <div class = 'item'>
@@ -379,7 +379,7 @@
           <%= f.hidden_field :name, value: "fas fa-american-sign-language-interpreting fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>      
       <div class = 'item'>
@@ -388,7 +388,7 @@
           <%= f.hidden_field :name, value: "fa fa-assistive-listening-systems fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>      
 
@@ -398,7 +398,7 @@
           <%= f.hidden_field :name, value: "fa fa-paw fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
-          <%= f.submit("地点登録", class:'ok_btn')%>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>  
     </div>

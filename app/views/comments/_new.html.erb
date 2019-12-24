@@ -3,9 +3,9 @@
   <% unless define_check.nil? %>
     <%= form_with(model:[map,site,comment],remote:true,method: :post) do |form| %>
       <div id="comment_field">
-        <%= form.label :content, "コメントを入力" %>
-        <%= form.text_area :content, size: "30x4", placeholder: "140文字以内で入力"%>
-        <%= form.submit "コメントする"%>
+        <%= form.label :content, t('maps.input_comment') %>
+        <%= form.text_area :content, size: "30x4", placeholder: t('maps.within_140_characters')%>
+        <%= form.submit t('maps.comment')%>
       </div>
     <% end %>
     <div id = "reviews_validation"></div>

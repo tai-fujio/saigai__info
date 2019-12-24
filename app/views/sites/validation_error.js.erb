@@ -1,9 +1,11 @@
 if(typeof jQuery != "undefined"){
   $(function(){
     $('#sites_validation').html("<%= j(render 'message') %>");
-    
+
     $('#notice_message').html("");
-    
+
     $("textarea").val("");
+
+    $('#reviews_validation').html("");
     });
   }
