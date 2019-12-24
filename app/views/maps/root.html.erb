@@ -1,5 +1,6 @@
 <body id = "maps_index">
   <h1>saigai__info</h1>
+  <p class = "notice"><%= notice %></p>
   <%=button_to t('maps.select_map'), {controller: 'maps', action: 'index'}, {method: :get,class: "button"} %><br>
   <%=button_to t('maps.create_map'), {controller: 'maps', action: 'new'}, {method: :get,class: "button"} %><br>
 </body>

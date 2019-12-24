@@ -1,4 +1,8 @@
 <body id = "maps_index">
-  <h1>マップ選択画面</h1>
-  <button id="click">t('maps.select_map')</button>
+  <h2><%= t('maps.select_map') %></h2>
+  <p class = "notice"><%= notice %></p>
+  <%= form_tag('/maps/select',method: :get) do %>
+    <%= select_tag('id',options_from_collection_for_select(@maps,:id,:name),class:"button",include_blank:t('maps.select')) %><br>
+    <%= submit_tag(t('maps.look'),class:"button",name:nil) %>
+  <% end %><br><br>    <%= button_to t('maps.back'),{controller: 'maps',action: 'root'},{method: :get,class:"button"} %>
 </body>

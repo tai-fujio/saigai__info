@@ -18,14 +18,21 @@ class MapsController < ApplicationController
   end
 
   def index
+    @map = Map.new
     @maps = Map.all
   end
 
   def show
-    @map = Map.find(params[:id])
-    @site = @map.sites.build
-    sites
-    @all_sites = compose(@sites)
+    @maps = Map.all
+    if params[:id] == ""
+      flash.now[:notice] = "マップを選んでください"
+      render :index
+    else
+      @map = Map.find(params[:id])
+      @site = @map.sites.build
+      sites
+      @all_sites = compose(@sites)
+    end
   end
 
   def destroy;end
@@ -46,7 +53,7 @@ class MapsController < ApplicationController
 
   private
   def map_params
-    params.require(:map).permit(:name,:password,:password_confirmation,creater)
+    params.require(:map).permit(:name,:password,:password_confirmation,:creater)
   end
 
 end
