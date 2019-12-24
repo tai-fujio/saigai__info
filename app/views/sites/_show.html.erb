@@ -1,15 +1,15 @@
 <div id = "sites_show">
-  <h5>t('maps.map_name'): <%=@site&.map&.name%><br>t(maps.map_creater): <%=@site&.map&.name%></h3>
+  <h5><%= t('maps.map_name') %> : <%=@site&.map&.name%><br><%= t('maps.map_creater') %> : <%=@site&.map&.creater%></h5>
   <% define_check = defined? site %>
   <% unless define_check.nil? %>
     <% if site.title != nil %>
-      <h3>t('maps.site_name'): <%=site.title%></h3>
+      <h3><%= t('maps.site_name') %> : <%= site.title %></h3>
     <% else %>
-      <h5>t(maps.name_site)</h5>
+      <h5><%= t('maps.name_site') %></h5>
       <%= form_with(model:@site,url:map_site_path(@site),remote: true,method: :patch) do |form| %>
-        <%= form.label :title, t(maps.name) %>
+        <%= form.label :title, t('maps.name') %>
         <%= form.text_field :title %>
-        <%= form.submit t('maps.registe') %>
+        <%= form.submit t('maps.register') %>
       <% end %>
     <% end %>
     <div id = "sites_validation">

@@ -5,15 +5,12 @@
       <% unless comment.id.nil? %>
         <div id = "comment_show">
           <h3><%= comment.content %></h3>
-          <h5><%= time_ago_in_words(comment.created_at)+t('maps.time_before') %></h5><br>
+          <h5><%= time_ago_in_words(comment.created_at)+t('maps.time_before') %></h5>
+            <div id = "reviews_show">
               <%= link_to t('maps.helpful'),reviews_count_path(key: :good, comment_id: comment), method: :post,remote: true %>
-              <div id = "reviews_show">
-                <%=comment.review.good%>
-              </div>
+              <%=comment.review.good%>
               <%= link_to t('maps.not_helpful'),reviews_count_path(key: :bad,comment_id: comment), method: :post, remote: true %>
-              <div id = "reviews_show">
-                <%=comment.review.bad%>
-              </div>
+              <%=comment.review.bad%>
             </div>
           </div>
         </div><hr/>

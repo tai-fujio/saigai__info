@@ -49,10 +49,10 @@ body div a {
 	margin:200px auto 0;
 	text-align:center;
 	padding-top:25px;
-	width:30%;
-	height:20%;
+	width:25%;
+	height:25%;
 	background:#FFF;
-	border-radius:5px;
+  border-radius:5px;
 }
 
 #notice_box {
@@ -65,7 +65,7 @@ body div a {
 	width:20%;
 	height:13%;
 	background:#FFF;
-	border-radius:5px;
+  border-radius:5px;
 }
 
 .ok_btn{
@@ -139,11 +139,15 @@ transition: 0.5s;
     height: auto;
     background-color: rgb(230,228,224);
     position: absolute;
+    width:100%;
   }
 
   #right_bar_bottom{
     color: white;
     margin-top: 420px;
+    height: 100%;
+    width: 100%;
+    padding: 2%;
   }
 
   #sites_show{
@@ -156,8 +160,14 @@ transition: 0.5s;
   word-break: break-all;
   }
 
-  #review_show{
-  text-align: right;
+  #reviews_show{
+    text-align: end;
+    padding-right: 5%;
+  }
+
+  #reviews_show a{
+    color: white;
+    text-decoration: underline;
   }
 
   .items{

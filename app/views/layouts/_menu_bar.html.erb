@@ -1,7 +1,7 @@
 <% unless @map&.id.nil? %>
   <div id="menu_bar">
     <div class="direction_box">
-      <p>&lt;t('maps.register_site')&gt;<br>t('maps.to_map')<br>t('maps.doubleclick')<br>↓<br>t('maps.to_icon')<br>t('maps.click')</p>
+      <p>&lt;<%= t('maps.register_site') %> &gt; <br><%= t('maps.to_map') %><br><%= t('maps.doubleclick') %><br> ↓ <br><%= t('maps.to_icon') %><br><%= t('maps.click') %></p>
     </div>
     <div class="items">
       <div class = 'item'>
@@ -330,8 +330,8 @@
       </div>
       <div class = 'item'>
         <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
-          <%= icon('fa','female',class: "fa-3x fa-fw fa-female" )%>
-          <%= f.hidden_field :name, value: "fa fa-female fa-5x" %>
+          <%= icon('fa','child',class: "fa-3x fa-fw fa-child" )%>
+          <%= f.hidden_field :name, value: "fa fa-child fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
           <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
@@ -339,8 +339,8 @@
       </div>
       <div class = 'item'>
         <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
-          <%= icon('fa','child',class: "fa-3x fa-fw fa-child" )%>
-          <%= f.hidden_field :name, value: "fa fa-child fa-5x" %>
+          <%= icon('fa','female',class: "fa-3x fa-fw fa-female" )%>
+          <%= f.hidden_field :name, value: "fa fa-female fa-5x" %>
           <%= f.hidden_field :longitude %>
           <%= f.hidden_field :latitude %>
           <%= f.submit(t('maps.register_site'), class:'ok_btn')%>

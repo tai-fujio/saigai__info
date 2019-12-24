@@ -3,5 +3,7 @@ if(typeof jQuery != "undefined"){
     $("#comments_index").html("<%= j(render 'comments/index',{site:@site})%>");
     
     $('#reviews_validation').html("");
+
+    $('#notice_message').html("");
     });
   }
