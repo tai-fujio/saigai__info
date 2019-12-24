@@ -4,5 +4,6 @@
   <%= form_tag('/maps/select',method: :get) do %>
     <%= select_tag('id',options_from_collection_for_select(@maps,:id,:name),class:"button",include_blank:t('maps.select')) %><br>
     <%= submit_tag(t('maps.look'),class:"button",name:nil) %>
-  <% end %><br><br>    <%= button_to t('maps.back'),{controller: 'maps',action: 'root'},{method: :get,class:"button"} %>
+  <% end %><br><br>
+  <%= button_to t('maps.back'),{controller: 'maps',action: 'root'},{method: :get,class:"button"} %>
 </body>

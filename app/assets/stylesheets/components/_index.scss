@@ -29,6 +29,16 @@
     transition:background-color .3s;
   }
 
+  .admin_button{
+    margin-left:3%;
+    cursor:pointer;
+    border:none;
+    color:white;
+    background-color:red;
+    border-radius:3px;
+    outline:none;
+  }
+
   h1{
     margin:170px 0 20px;
     font-size:5em;

@@ -3,13 +3,9 @@
     <div id = "right_bar_head">
       <div class = close_btn>
         <button href="javascript:void(0)" class="closebtn" id='close-nav'><strong>x</strong></button>
-        <% if @map&.id != nil %>
-        <%= button_to t('maps.admin'),admin_map_path(@map&.id),method: :get,data:{confirm: "管理画面に移りますか"},class:"admin_button" %>
-        <% end %>
       </div>
       <h5 id="notice_message"></h5>
       <%= render 'sites/show' ,locals:{site:@site,map:@map} %>
-      <%= render 'comments/new' ,locals:{site:@site,map:@map,comment:@comment} %>
     </div>
     <div id = "right_bar_bottom">
       <div id = "comments_index">
