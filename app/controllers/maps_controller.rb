@@ -2,6 +2,16 @@ class MapsController < ApplicationController
 
   def root; end
 
+  def authenticate
+    map = Map.find(params[:id])
+    if map.authenticate(params[:password])
+      redirect_to admin_map_path(map.id)
+    else
+      flash.now[:notice] ="パスワードが合いません"
+      render :show
+    end
+  end
+
   def sites
     @sites ||= @map.sites
   end

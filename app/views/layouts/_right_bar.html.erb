@@ -3,9 +3,22 @@
     <div id = "right_bar_head">
       <div class = close_btn>
         <button href="javascript:void(0)" class="closebtn" id='close-nav'><strong>x</strong></button>
+      </div>
+      <div class = "head_components">
+        <div class = "head_component root_btn">
+          <%= button_to "初期画面へ",{controller: 'maps',action: 'root'},{method: :get,class:"root_button"} %>
+        </div>
+        <div class = "head_component">
         <% if @map&.id != nil %>
-        <%= button_to t('maps.admin'),admin_map_path(@map&.id),method: :get,data:{confirm: "管理画面に移りますか"},class:"admin_button" %>
+          <%=form_with(url:maps_authenticate_path,local:true) do |f|%>
+            <%=f.submit("管理画面へ",class:"admin_button",data:{confirm: "管理画面に移りますか"})%>
+        </div>
+        <div class = "head_component">
+            <%=f.hidden_field :id,value:@map.id %>
+            <%=f.password_field :password ,placeholder: "マップパスワード"%>
+          <% end %>
         <% end %>
+        </div>
       </div>
       <h5 id="notice_message"></h5>
       <%= render 'sites/show' ,locals:{site:@site,map:@map} %>
