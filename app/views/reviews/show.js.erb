@@ -1,7 +1,7 @@
 if(typeof jQuery != "undefined"){
   $(function(){
     $("#comments_index").html("<%= j(render 'comments/index',{site:@site})%>");
-    
+
     $('#reviews_validation').html("");
 
     $('#notice_message').html("");

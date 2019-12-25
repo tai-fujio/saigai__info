@@ -1,5 +1,15 @@
 class SitesController < ApplicationController
-  protect_from_forgery except: [:create]
+
+  def delete
+    @site = Site.find(params[:id])
+    @map = Map.find(params[:map_id])
+    if @map.authenticate(params[:password])
+      @site.destroy
+      redirect_to map_path(@map)
+    else
+      render file: "#{Rails.root}/public/password_error.html.erb", layout: false, status: 401
+    end
+  end
 
   def create
     @map = Map.find(params[:map_id])
@@ -7,14 +17,6 @@ class SitesController < ApplicationController
     @site.save
     redirect_to map_path(@map)
   end
-
-  # def new
-  #   @map = Map.find(params[:map_id])
-  #   @site = @map.sites.build
-  #   respond_to do |format|
-  #     format.js{render :index}
-  #   end
-  # end
 
   def show
     @site = Site.find(params[:id])

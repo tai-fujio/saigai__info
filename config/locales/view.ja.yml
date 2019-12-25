@@ -35,3 +35,8 @@ ja:
     select: えらぶ
     look: みる
     admin: 管理画面
+    deleted: 削除されました
+    error_message: パスワードが違います
+    delete: 削除
+    password: パスワード
+    root_page: 初期画面へ
