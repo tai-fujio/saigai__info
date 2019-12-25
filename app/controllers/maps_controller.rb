@@ -7,8 +7,7 @@ class MapsController < ApplicationController
     if map.authenticate(params[:password])
       redirect_to admin_map_path(map.id)
     else
-      flash.now[:notice] ="パスワードが合いません"
-      render :show
+      render file: "#{Rails.root}/public/password_error.html.erb", layout: false, status: 401
     end
   end
 
