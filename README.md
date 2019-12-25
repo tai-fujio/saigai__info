@@ -49,11 +49,22 @@ rails version: rails 5.2.4
 ## ワイヤーフレームワーク
 ![ワイヤーフレームワーク](app/assets/images/wire_frame.png)
 
-## 使用予定Gem
+## 使用Gem
 * 'webpacker'
 * 'mapbox-gl-rails'
+* 'sassc','2.0.0'
 * 'sassc-rails'
+* 'jquery-rails'
+* 'jquery-turbolinks'
+* 'awesome_print'
 * 'font-awesome-sass'
-* 'font-awesome-rails'
-* 'gem 'jquery-rails'
-* 'gem 'jquery-turbolinks'
+
+## How To Start
+1. git clone 
+2. bundle install
+3. npm install
+4. rails db
+5. .env（MAPBOX_API_KEY)
+6. rails s    
+7. bin/webpack-dev-server
+
