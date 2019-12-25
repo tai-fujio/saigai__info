@@ -12,7 +12,7 @@ class MapsController < ApplicationController
     lng: site.longitude,
     name: site.name,
     id: site.id,
-    map_id: site.map_id
+    map_id: site.map.id
     }
     end
   end

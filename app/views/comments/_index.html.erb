@@ -8,10 +8,10 @@
           <h5><%= time_ago_in_words(comment.created_at)+t('maps.time_before') %></h5>
           <div class = "comment_delete_field">
           <%=form_with(url:comments_delete_path,remote:true) do |f|%>
-            <%=f.submit("削除",class:"admin_button",data:{confirm: "削除しますか"})%>
+            <%=f.submit(t('maps.delete'),class:"admin_button",data:{confirm: "削除しますか"})%>
             <%=f.hidden_field :id,value:comment.id %>
             <%=f.hidden_field :map_id,value:comment.site.map.id %>
-            <%=f.password_field :password ,placeholder: "パスワード",size: "13"%>
+            <%=f.password_field :password ,placeholder: t('maps.password'),size: "13"%>
             <% end %>
           </div>
           <div id = "reviews_show">

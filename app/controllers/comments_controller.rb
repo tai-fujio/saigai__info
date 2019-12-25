@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  
+
   def delete
     @comment = Comment.find(params[:id])
     @site = Site.find(@comment.site.id)
@@ -10,32 +10,31 @@ class CommentsController < ApplicationController
         format.js{render :delete}
       end
     else
-      render file: "#{Rails.root}/public/password_error.html.erb", layout: false, status: 401
+      respond_to do |format|
+        format.js{render :password_error}
+      end
     end
   end
 
   def new
     @site = Site.find(params[:id])
-    @map = Map.find(@site.map_id)
+    @map = Map.find(@site.map.id)
     @comment =@site.comments.build
     respond_to do |format|
       format.js{render :index}
     end
   end
-  
-  def index
-    # @site = Site.find(params[:id])
-    @comments = Comment.all
-    # head :no_content
-    respond_to do |format|
-      format.js{render :index}
-    end
-  end
+
+  # def index
+  #   @comments = Comment.all
+  #   respond_to do |format|
+  #     format.js{render :index}
+  #   end
+  # end
 
   def create
-    # @site = Site.find(params[:id])
-    @map = Map.find(params[:map_id])
     @site = Site.find(params[:site_id])
+    @map = Map.find(@site.map.id)
     @comment = @site.comments.build(comment_params)
     if @comment.invalid?
       respond_to do |format|
