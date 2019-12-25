@@ -63,8 +63,9 @@ rails version: rails 5.2.4
 1. git clone 
 2. bundle install
 3. npm install
-4. rails db
-5. .env（MAPBOX_API_KEY)
-6. rails s    
-7. bin/webpack-dev-server
+4. rails db:create
+5. rails db:migrate
+6. .env（MAPBOX_API_KEY)
+7. rails s    
+8. bin/webpack-dev-server
 
