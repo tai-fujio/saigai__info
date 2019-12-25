@@ -1,0 +1,14 @@
+if(typeof jQuery != "undefined"){
+$(function(){
+
+  $("#comments_index").html("<%= j(render 'comments/index', {site:@site}) %>");
+
+  $('#sites_validation').html("");
+
+  $('#reviews_validation').html("");
+
+  $('#notice_message').html("<%= j(render 'layouts/infomation') %>");
+
+  $("textarea").val("");
+  });
+}

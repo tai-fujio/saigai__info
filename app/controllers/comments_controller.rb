@@ -1,5 +1,19 @@
 class CommentsController < ApplicationController
   
+  def delete
+    @comment = Comment.find(params[:id])
+    @site = Site.find(@comment.site.id)
+    @map = Map.find(@comment.site.map.id)
+    if @map.authenticate(params[:password])
+      @comment.destroy
+      respond_to do |format|
+        format.js{render :delete}
+      end
+    else
+      render file: "#{Rails.root}/public/password_error.html.erb", layout: false, status: 401
+    end
+  end
+
   def new
     @site = Site.find(params[:id])
     @map = Map.find(@site.map_id)

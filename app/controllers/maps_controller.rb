@@ -2,15 +2,6 @@ class MapsController < ApplicationController
 
   def root; end
 
-  def authenticate
-    map = Map.find(params[:id])
-    if map.authenticate(params[:password])
-      redirect_to admin_map_path(map.id)
-    else
-      render file: "#{Rails.root}/public/password_error.html.erb", layout: false, status: 401
-    end
-  end
-
   def sites
     @sites ||= @map.sites
   end

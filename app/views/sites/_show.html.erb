@@ -12,6 +12,16 @@
         <%= form.submit t('maps.register') %>
       <% end %>
     <% end %>
+    <div class = "site_delete_field">
+      <% if @site&.id != nil %>
+        <%=form_with(url:sites_delete_path,local:true) do |f|%>
+          <%=f.submit("削除",class:"admin_button",data:{confirm: "削除しますか"})%>
+          <%=f.hidden_field :id,value:@site.id %>
+          <%=f.hidden_field :map_id,value:@site.map_id %>
+          <%=f.password_field :password ,placeholder: "パスワード",size: "13"%>
+        <% end %>
+      <% end %>
+    </div>
     <div id = "sites_validation">
     </div>
   <% end %>

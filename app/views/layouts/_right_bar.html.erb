@@ -8,17 +8,6 @@
         <div class = "head_component root_btn">
           <%= button_to "初期画面へ",{controller: 'maps',action: 'root'},{method: :get,class:"root_button"} %>
         </div>
-        <div class = "head_component">
-        <% if @map&.id != nil %>
-          <%=form_with(url:maps_authenticate_path,local:true) do |f|%>
-            <%=f.submit("管理画面へ",class:"admin_button",data:{confirm: "管理画面に移りますか"})%>
-        </div>
-        <div class = "head_component">
-            <%=f.hidden_field :id,value:@map.id %>
-            <%=f.password_field :password ,placeholder: "マップパスワード"%>
-          <% end %>
-        <% end %>
-        </div>
       </div>
       <h5 id="notice_message"></h5>
       <%= render 'sites/show' ,locals:{site:@site,map:@map} %>
