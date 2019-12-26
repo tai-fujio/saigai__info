@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'maps#root'
   get 'maps/select' => 'maps#show'
+  get 'reviews/count'
   post 'reviews/count'
   post 'sites/delete'
   post 'comments/delete'

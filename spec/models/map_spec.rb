@@ -23,8 +23,8 @@ RSpec.describe Map, type: :model do
       expect(map.errors.messages[:name]).to include ("を入力してください")
     end
     it "nameのユニークネステスト" do
-      map = Map.create(name:"test_map",password:"abcdef")
-      map = Map.new(name:"test_map",password:"abcdef")
+      map = Map.create(name:"test__map",password:"abcdef")
+      map = Map.new(name:"test__map",password:"abcdef")
       map.valid?
       expect(map.errors.messages[:name]).to include ("はすでに存在します")
     end
@@ -43,7 +43,7 @@ RSpec.describe Map, type: :model do
     end
     it "名前が昇順に並んでいるか" do
       expect(Map.last).to eq(@map2)
-      expect(Map.first).to eq(@map3)
+      expect(Map.second).to eq(@map3)
     end
   end
 end

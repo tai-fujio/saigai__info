@@ -38,6 +38,9 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'webdrivers'
+  gem 'capybara-webkit'
+  gem 'rack_session_access'
 end
 
 gem 'awesome_print'

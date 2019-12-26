@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :map do
-    name { "test_map" }
+    name { "test__map" }
     password { "password" }
     creater {"tester"}
   end

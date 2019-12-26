@@ -191,12 +191,6 @@ transition: 0.5s;
   right:0;
   }
 
-  .head_components{
-    display: flex;
-    flex-flow: row no-wrap;
-    justify-content: flex-end;
-  }
-
   #sites_validation {
     text-indent: -1.5rem;
   }
@@ -241,11 +235,13 @@ transition: 0.5s;
   }
 
   .root_button{
-    margin-right: 10px;
     cursor: pointer;
     border: none;
     color:white;
-    background-color:#45ABB5;
+    background-color:blue;
     border-radius: 3px;
     outline: none;
+    text-align: center;
+    width:100%;
+    margin-bottom: 5px;
   }
