@@ -15,10 +15,14 @@
             <% end %>
           </div>
           <div id = "reviews_show">
-            <%= link_to t('maps.helpful'),reviews_count_path(key: :good, comment_id: comment), method: :post,remote: true %>
-            <%=comment.review.good%>
-            <%= link_to t('maps.not_helpful'),reviews_count_path(key: :bad,comment_id: comment), method: :post, remote: true %>
-            <%=comment.review.bad%>
+            <%= link_to t('maps.helpful'),reviews_count_path(key: :good, comment_id: comment), method: :post,remote: true, class: "review" %>
+            <div class = "review_count">
+              <%=comment.review.good%>
+            </div>
+            <%= link_to t('maps.not_helpful'),reviews_count_path(key: :bad,comment_id: comment), method: :post, remote: true, class: "review"%>
+            <div class = "review_count">
+              <%=comment.review.bad%>
+            </div>
           </div>
         </div><hr/>
       <% end %>

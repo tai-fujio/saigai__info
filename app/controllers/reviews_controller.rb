@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   def count
     @comment = Comment.find(params[:comment_id])
     @review = Review.find(@comment.review.id)
-    @site = Site.find(@comment.site_id)
+    @site = Site.find(@comment.site.id)
     if params[:key] == "good"
       @review.increment(:good)
       @key = Key.new(value: session[:session_id])
@@ -21,6 +21,8 @@ class ReviewsController < ApplicationController
       @key.save
       respond_to do |format|
         format.js{render :show}
+        format.html{render partial: "comments/index",locals: {
+          site:@site,comments:@comments,review:@review}}
       end
     end
   end

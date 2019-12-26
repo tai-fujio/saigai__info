@@ -8,6 +8,8 @@ class CommentsController < ApplicationController
       @comment.destroy
       respond_to do |format|
         format.js{render :delete}
+        format.html{render partial: "comments/index",locals: {
+          site:@site,comments:@comments,review:@review}}
       end
     else
       respond_to do |format|
@@ -17,20 +19,18 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @site = Site.find(params[:id])
-    @map = Map.find(@site.map.id)
-    @comment =@site.comments.build
+    unless params[:id]
+      @site = Site.find(params[:site_id])
+    else
+      @site = Site.find(params[:id])
+    end
+      @map = Map.find(@site.map.id)
+      @comment =@site.comments.build
     respond_to do |format|
       format.js{render :index}
+      format.html{render partial: "comments/new",locals: { site:@site, map:@map, comment:@comment, review:@review }}
     end
   end
-
-  # def index
-  #   @comments = Comment.all
-  #   respond_to do |format|
-  #     format.js{render :index}
-  #   end
-  # end
 
   def create
     @site = Site.find(params[:site_id])
@@ -46,6 +46,7 @@ class CommentsController < ApplicationController
       @review.save
       respond_to do |format|
         format.js{render :index and return}
+        format.html{render partial: "comments/index",locals: { site:@site ,comments:@site.comments}}
       end
     end
   end

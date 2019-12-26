@@ -25,6 +25,7 @@ class SitesController < ApplicationController
     @comments = @site.comments
     respond_to do |format|
       format.js{render :index}
+      format.html{render partial: "sites/show",locals: { site:@site }}
     end
   end
 
@@ -39,11 +40,12 @@ class SitesController < ApplicationController
     end
     respond_to do |format|
       format.js{render :update_site and return}
+      format.html{render 'maps/show'}
     end
   end
 
   private
   def site_params
-    params.require(:site).permit(:name,:latitude,:longitude,:description,:title)
+    params.require(:site).permit(:name,:latitude,:longitude,:title)
   end
 end

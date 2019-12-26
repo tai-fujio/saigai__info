@@ -5,7 +5,7 @@ ja:
     not_helpful: 役立たない
     input_comment: コメントを入力
     within_140_characters: 140文字以内で入力
-    at_least_6_characters: 6文字以内で入力
+    at_least_6_characters: 6文字以上で入力
     reenter_password: ６文字以上で再度入力
     comment: コメントする
     register_site: 地点登録
