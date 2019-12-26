@@ -4,11 +4,6 @@
       <div class = close_btn>
         <button href="javascript:void(0)" class="closebtn" id='close-nav'><strong>x</strong></button>
       </div>
-      <div class = "head_components">
-        <div class = "head_component root_btn">
-          <%= button_to t('maps.root_page'),{controller: 'maps',action: 'root'},{method: :get,class:"root_button"} %>
-        </div>
-      </div>
       <h5 id="notice_message"></h5>
       <%= render 'sites/show' ,locals:{site:@site,map:@map} %>
       <%= render 'comments/new' ,locals:{site:@site,map:@map,comment:@comment} %>
