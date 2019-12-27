@@ -25,6 +25,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'launchy'
+  gem 'awesome_print'
 end
 
 group :development do
@@ -43,7 +44,6 @@ group :test do
   gem 'rack_session_access'
 end
 
-gem 'awesome_print'
 gem 'bcrypt_pbkdf'
 gem 'dotenv-rails'
 gem 'ed25519'
