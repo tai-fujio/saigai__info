@@ -48,3 +48,12 @@ rails version: rails 5.2.4
 * 'gem 'jquery-rails'
 * 'gem 'jquery-turbolinks'
 *  etc.
+
+## スタート
+1. git clone
+2. bundle install
+3. npm install
+4. rails db:create rails db:migrate
+6. .env（MAPBOX_API_KEY)
+7. rails s
+8. bin/webpack-dev-server
