@@ -47,7 +47,7 @@ rails version: rails 5.2.4
 * 'font-awesome-sass'
 * 'gem 'jquery-rails'
 * 'gem 'jquery-turbolinks'
-*  etc.
+   etc.
 
 ## スタート
 1. git clone
