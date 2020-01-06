@@ -2,7 +2,7 @@ class MapsController < ApplicationController
 
   def root; end
 
-  def sites
+  def site_setting
     @sites ||= @map.sites
   end
 
@@ -30,12 +30,10 @@ class MapsController < ApplicationController
     else
       @map = Map.find(params[:id])
       @site = @map.sites.build
-      sites
+      site_setting
       @all_sites = compose(@sites)
     end
   end
-
-  def destroy;end
 
   def new
     @map = Map.new

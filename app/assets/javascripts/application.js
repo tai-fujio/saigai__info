@@ -13,6 +13,4 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require rails-ujs
-//= ./node_modules/jquery/dist/jquery.js
-//= require mapbox-gl
 //= require_tree .

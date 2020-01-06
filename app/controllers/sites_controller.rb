@@ -1,5 +1,7 @@
 class SitesController < ApplicationController
 
+  attr_reader :id,:map_id
+
   def delete
     @site = Site.find(params[:id])
     @map = Map.find(params[:map_id])

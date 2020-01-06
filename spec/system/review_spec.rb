@@ -18,7 +18,7 @@ RSpec.describe Review, type: :system do
         fill_in "comment[content]", with: "テストコメント"
         click_button("コメントする")
         page.find(".review",match: :first).click
-        expect(page.find(".review_count",match: :first).text).to eq "1"
+        expect(page.find(".review",match: :first).text).to eq "1"
       end
     end
   end

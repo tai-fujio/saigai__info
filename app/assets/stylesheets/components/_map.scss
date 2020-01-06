@@ -160,9 +160,22 @@ transition: 0.5s;
   word-break: break-all;
   }
 
+  #comment_show{
+    margin-right: 3%;
+  }
+
   #reviews_show{
-    text-align: end;
-    padding-right: 5%;
+    padding-left: 3%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .review{
+    margin-right: 5px;
+  }
+
+  .review:last-child{
+    margin-left: auto;
   }
 
   #reviews_show a{

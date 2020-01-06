@@ -16,11 +16,13 @@
     </div>
     <div class = "site_delete_field">
       <% if @site&.id != nil %>
-        <%=form_with(url:sites_delete_path,local:true) do |f|%>
-          <%=f.submit(t('maps.delete'),class:"admin_button",data:{confirm: "削除しますか"})%>
-          <%=f.hidden_field :id,value:@site.id %>
-          <%=f.hidden_field :map_id,value:@site.map_id %>
-          <%=f.password_field :password ,placeholder: t('maps.password'),size: "13"%>
+        <% if @site != @site.map.sites.first%>
+          <%=form_with(url:sites_delete_path,local:true) do |f|%>
+            <%=f.submit(t('maps.site_delete'),class:"admin_button",data:{confirm: "削除しますか"})%>
+            <%=f.hidden_field :id,value:@site.id %>
+            <%=f.hidden_field :map_id,value:@site.map_id %>
+            <%=f.password_field :password ,placeholder: t('maps.password'),size: "13"%>
+          <% end %>
         <% end %>
       <% end %>
     </div>

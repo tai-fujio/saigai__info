@@ -1,8 +1,6 @@
 ja:
   maps:
     time_before: 前
-    helpful: 役立つ
-    not_helpful: 役立たない
     input_comment: コメントを入力
     within_140_characters: 140文字以内で入力
     at_least_6_characters: 6文字以上で入力
@@ -16,7 +14,7 @@ ja:
     registered: 登録されました
     select_map: マップをみる
     create_map: マップをつくる
-    necessary_to_admin: ※情報管理の際に必要です
+    necessary_to_admin: ※登録情報削除の際に必要
     user_definable: 入力は任意
     create: つくる
     update_now: マップ表示準備中
@@ -38,5 +36,6 @@ ja:
     deleted: 削除されました
     error_message: パスワードが違います
     delete: 削除
+    site_delete: サイト削除
     password: パスワード
     root_page: 初期画面へ
