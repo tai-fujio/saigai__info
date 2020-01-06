@@ -28,9 +28,9 @@ const initMap = () => {
 
       map.addControl(new mapboxgl.GeolocateControl({
       positionOptions: {
-      enableHighAccuracy: true
+      enableHighAccuracy: false,timeout:6000
       },
-      trackUserLocation: true
+      showUserLocation: false
       }));
 
       const user_info = () => {
