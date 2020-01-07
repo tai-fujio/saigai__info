@@ -1,8 +1,8 @@
 import mapboxgl from 'mapbox-gl';
 import { placeMarker } from './place_marker';
 import { fitMap } from './fit_map';
-import { openBar } from './open_bar';
-import { closeBar } from './close_bar';
+import { sidebarClose } from './sidebar_close';
+import { rightbarOpen } from './rightbar_open';
 
 const initMap = () => {
   const mapDiv = document.getElementById('map');
@@ -67,19 +67,8 @@ const initMap = () => {
       trackUserLocation: true
       }));
 
-      const rightbarOpen = () => {
-        const markers = document.getElementsByClassName("mapboxgl-marker");
-        for( var i = 0 ,l = markers.length; i < l ; i++ ) {
-          var marker = markers[i] ;
-          marker.addEventListener("click", openBar ,false)
-          };
-        };
       rightbarOpen();
 
-      const sidebarClose = () => {
-        const closeButton = document.getElementById("close-nav");
-        closeButton.addEventListener("click", closeBar ,false)
-      };
       sidebarClose();
     };
   };

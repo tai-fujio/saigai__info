@@ -1,9 +1,8 @@
+import { userInfo } from './user_info';
+
 document.getElementById("map").ondblclick = function(e){
-  const user_info = () => {
-    $("#click_info").fadeIn(300);
-    $("#click_info").fadeOut(1000);
-    };
-    user_info();
+
+    userInfo();
 
   var coordinates = document.getElementsByTagName("pre").info.innerHTML
   var lng_index = coordinates.indexOf("lng");
