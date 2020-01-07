@@ -5,7 +5,7 @@
       <div id="comment_field">
         <%= form.label :content, t('maps.input_comment') %>
         <%= form.text_area :content, size: "30x4", placeholder: t('maps.within_140_characters')%>
-        <%= form.submit t('maps.comment')%>
+        <%= form.submit t('maps.comment'),class: "submit_btn"%>
       </div>
     <% end %>
     <div id = "reviews_validation"></div>

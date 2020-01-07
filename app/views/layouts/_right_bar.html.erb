@@ -1,9 +1,9 @@
 <div id ="right_bar">
   <div>
     <div id = "right_bar_head">
-      <div class = close_btn>
-        <button href="javascript:void(0)" class="closebtn" id='close-nav'><strong>x</strong></button>
-      </div>
+      <button href="javascript:void(0)" class="close_btn" id='close-nav'>
+         <i class="fas fa-times fa-3x"></i>
+      </button>
       <h5 id="notice_message"></h5>
       <%= render 'sites/show' ,locals:{site:@site,map:@map} %>
       <%= render 'comments/new' ,locals:{site:@site,map:@map,comment:@comment} %>

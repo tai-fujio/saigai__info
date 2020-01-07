@@ -1,3 +1,11 @@
+body {
+font-family:
+-apple-system, BlinkMacSystemFont,
+“Noto Sans JP”,
+“Helvetica Neue”, YuGothic,
+“Yu Gothic”, Verdana;
+}
+
 body div a {
   text-decoration: none;
 }
@@ -129,15 +137,17 @@ transition: 0.5s;
   z-index: 3;
   top: 5%;
   right: 0;
-  background:rgba(0, 0, 0, .7);
+  background:rgba(0, 0, 0, .65);
   overflow-x: hidden;
   transition: 0.5s;
   word-break: break-all;
   }
 
   #right_bar_head{
+    border-radius:15px;
     height: auto;
-    background-color: rgb(230,228,224);
+    background:rgba(0, 0, 0, .3);
+    color: white;
     position: absolute;
     width:100%;
   }
@@ -194,14 +204,38 @@ transition: 0.5s;
   }
 
   #notice_message{
-    color: green;
+    color: white;
     margin: 5%;
+    font-size: large;
   }
 
   .close_btn{
-  width: 1%;
-  top:0;
-  right:0;
+    display: block;
+    width: 56px;
+    height: 56px;
+    background:grey;
+    color:white;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .close_btn:focus {
+    outline: none;
+    }
+
+  .submit_btn {
+    font-size: large;
+    display: inline-block;
+    padding: 0.1em 0.5em;
+    text-decoration: none;
+    background-color: grey;
+    color:white;
+    border-radius: 15px;
+  }
+  
+  .btn-flat-border:hover {
+    background: #67c5ff;
+    color: white;
   }
 
   #sites_validation {
