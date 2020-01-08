@@ -1,4 +1,4 @@
-# アプリ名：saigai_info
+# アプリ名：saigai__info
 ![運用画面](app/assets/images/saigai__info_page.png)
 
 ## アプリ概要
