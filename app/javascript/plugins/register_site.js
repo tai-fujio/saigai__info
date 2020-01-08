@@ -1,10 +1,11 @@
-import { userInfo } from './user_info';
+import { userMessage } from './user_info';
 
 document.getElementById("map").ondblclick = function(e){
 
-    userInfo();
+  userMessage();
 
-  var coordinates = document.getElementsByTagName("pre").info.innerHTML
+  var coordinates = document.getElementsByTagName("pre")
+  .info.innerHTML
   var lng_index = coordinates.indexOf("lng");
   var lat_index = coordinates.indexOf("lat");
   var lng = parseFloat(coordinates.substr(lng_index+5,14));

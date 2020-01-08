@@ -24,8 +24,8 @@ class CommentsController < ApplicationController
     else
       @site = Site.find(params[:id])
     end
-      @map = Map.find(@site.map.id)
-      @comment =@site.comments.build
+    @map = Map.find(@site.map.id)
+    @comment =@site.comments.build
     respond_to do |format|
       format.js{render :index}
       format.html{render partial: "comments/new",locals: { site:@site, map:@map, comment:@comment, review:@review }}

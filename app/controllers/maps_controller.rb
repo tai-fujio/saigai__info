@@ -2,8 +2,27 @@ class MapsController < ApplicationController
 
   def root; end
 
+  def index
+    @map = Map.new
+    @maps = Map.select(:id,:name)
+
+  end
+
+  def show
+    @maps = Map.select(:id,:name)
+    if params[:id] == ""
+      flash.now[:notice] = "マップを選んでください"
+      render :index
+    else
+      @map = Map.find(params[:id])
+      @site = @map.sites.build
+      site_setting
+      @sites_composed = compose(@sites)
+    end
+  end
+
   def site_setting
-    @sites ||= @map.sites
+    @sites = @map.sites
   end
 
   def compose(sites)
@@ -14,24 +33,6 @@ class MapsController < ApplicationController
     id: site.id,
     map_id: site.map.id
     }
-    end
-  end
-
-  def index
-    @map = Map.new
-    @maps = Map.all
-  end
-
-  def show
-    @maps = Map.all
-    if params[:id] == ""
-      flash.now[:notice] = "マップを選んでください"
-      render :index
-    else
-      @map = Map.find(params[:id])
-      @site = @map.sites.build
-      site_setting
-      @all_sites = compose(@sites)
     end
   end
 

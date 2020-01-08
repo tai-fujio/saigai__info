@@ -1,7 +1,5 @@
 class SitesController < ApplicationController
 
-  attr_reader :id,:map_id
-
   def delete
     @site = Site.find(params[:id])
     @map = Map.find(params[:map_id])
@@ -16,8 +14,11 @@ class SitesController < ApplicationController
   def create
     @map = Map.find(params[:map_id])
     @site = @map.sites.build(site_params)
-    @site.save
-    redirect_to map_path(@map)
+    if @site.save
+      redirect_to map_path(@map)
+    else
+      render file: "#{Rails.root}/public/500.html", layout: false, status: 500
+    end
   end
 
   def show
