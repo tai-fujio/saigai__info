@@ -6,6 +6,7 @@ RSpec.describe Site, type: :system do
     before do
       @map = FactoryBot.create(:map)
       @site = FactoryBot.create(:site,map_id:@map.id)
+      @site2 = FactoryBot.create(:site,map_id:@map.id,latitude:32)
     end
     context "sites#createのテスト" do
       it "longitude,latitudeの値がわたっている場合、任意に選んだアイコンの登録ができる" do
@@ -29,13 +30,13 @@ RSpec.describe Site, type: :system do
     end
     context "sites#deleteのテスト" do
       it "createされたsiteを削除することができる" do
-        visit "maps/#{@map.id}/sites/#{@site.id}/"
+        visit "maps/#{@map.id}/sites/#{@site2.id}/"
         fill_in "site[title]", with: "テストタイトル"
         click_button("登録する")
-        visit "maps/#{@map.id}/sites/#{@site.id}/"
+        visit "maps/#{@map.id}/sites/#{@site2.id}/"
         fill_in "password", with: "password"
         click_button("削除")
-        expect(Site.where(id:@site.id).empty?).to eq true
+        expect(Site.where(id:@site2.id).empty?).to eq true
       end
     end
   end

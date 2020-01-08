@@ -29,7 +29,7 @@ RSpec.describe Site, type: :model do
       expect(@site.errors.messages[:title]).to include ("を入力してください")
     end
     it "title文字数制約テスト" do
-      @site.title = "abcdefghijklmnopqrstuvwxyz"
+      @site.title = "#{'a'*21}"
       @site.valid?
       expect(@site.errors.messages[:title]).to include ("は20文字以内で入力してください")
     end

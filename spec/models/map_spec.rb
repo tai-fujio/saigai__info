@@ -13,7 +13,7 @@ RSpec.describe Map, type: :model do
       expect(map.errors.messages[:password]).to include ("は6文字以上で入力してください")
     end
     it "passwordの文字制約テスト" do
-      map = Map.new(name:"test",password:"abcdefghijklmnopqrstuvwxyz")
+      map = Map.new(name:"test",password:"#{'a'*21}")
       map.valid?
       expect(map.errors.messages[:password]).to include ("は20文字以内で入力してください")
     end
@@ -29,21 +29,9 @@ RSpec.describe Map, type: :model do
       expect(map.errors.messages[:name]).to include ("はすでに存在します")
     end
     it "createrの文字制限テスト" do
-      map = Map.new(name:"test",password:"abcdef",creater:"abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz")
+      map = Map.new(name:"test",password:"abcdef",creater:"#{'a'*41}")
       map.valid?
       expect(map.errors.messages[:creater]).to include ("は40文字以内で入力してください")
-    end
-  end
-
-  describe "ソートテスト" do
-    before do
-      @map1 = FactoryBot.create(:map, name: "カキクケコ")
-      @map2 = FactoryBot.create(:map, name: "サシスセソ")
-      @map3 = FactoryBot.create(:map, name: "アイウエオ")
-    end
-    it "名前が昇順に並んでいるか" do
-      expect(Map.last).to eq(@map2)
-      expect(Map.second).to eq(@map3)
     end
   end
 end

@@ -13,7 +13,7 @@ RSpec.describe Comment, type: :model do
       expect(comment.errors.messages[:content]).to include ("を入力してください")
     end
     it "content文字数制約テスト" do
-      comment = Comment.new(content: "abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz,abcdefghijklmnopqrstuvwxyz")
+      comment = Comment.new(content: "#{'a'*141}")
       comment.valid?
       expect(comment.errors.messages[:content]).to include ("は140文字以内で入力してください")
     end

@@ -8,17 +8,17 @@
           <h5><%= time_ago_in_words(comment.created_at)+t('maps.time_before') %></h5>
           <div id = "reviews_show">
             <div class = "review">
-              <%=link_to(content_tag(:i,"",class:"far fa-thumbs-up"),reviews_count_path(key: :good, comment_id: comment), method: :post,remote: true, class: "review")%>
+              <%=link_to(content_tag(:i,"",class:"far fa-thumbs-up"),reviews_count_path(key: :good, comment_id: comment), method: :post,remote: true, title: "thumbs",class: "thumbs")%>
             </div>
-            <div class = "review">
+            <div class = "review vote">
               <%=comment.review.good%>
             </div>
             <div class = "review">
             </div>
             <div class = "review">
-              <%=link_to(content_tag(:i,"",class:"far fa-thumbs-up fa-flip-vertical"),reviews_count_path(key: :bad, comment_id: comment), method: :post,remote: true, class: "review")%>
+              <%=link_to(content_tag(:i,"",class:"far fa-thumbs-up fa-flip-vertical"),reviews_count_path(key: :bad, comment_id: comment), method: :post,remote: true, class: "thumbs")%>
             </div>
-            <div class = "review">
+            <div class = "review vote">
               <%=comment.review.bad%>
             </div>
             <div class = "review">

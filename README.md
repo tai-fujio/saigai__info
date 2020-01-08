@@ -41,8 +41,8 @@ rails version: rails 5.2.4
 ## 画面遷移図
 ![画面遷移図](app/assets/images/screen_transition_diagram.png)
 
-## ワイヤーフレーム
-![ワイヤーフレーム](app/assets/images/wire_frame.png)
+## 画面構成
+![画面構成](app/assets/images/wire_frame.png)
 
 ## 使用Gem
 * 'webpacker'
