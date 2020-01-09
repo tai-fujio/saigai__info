@@ -2,7 +2,9 @@ ja:
   maps:
     time_before: 前
     input_comment: コメントを入力
-    within_140_characters: 140文字以内で入力
+    within_240_characters: |-
+      240文字以内で入力
+      (URLを入力できます。httpから入力してください)
     at_least_6_characters: 6文字以上で入力
     reenter_password: ６文字以上で再度入力
     comment: コメントする
@@ -26,7 +28,9 @@ ja:
     map_name: Map名
     map_creater: Map作成者
     site_name: この地点の名前
-    name_site: この地点に名前を登録できます
+    name_site: |-
+      この地点に名前を登録できます
+      (URLを入力できます。httpから入力してください)
     name: 名前
     register: 登録する
     back: もどる

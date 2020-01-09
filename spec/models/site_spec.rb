@@ -29,9 +29,9 @@ RSpec.describe Site, type: :model do
       expect(@site.errors.messages[:title]).to include ("を入力してください")
     end
     it "title文字数制約テスト" do
-      @site.title = "#{'a'*21}"
+      @site.title = "#{'a'*201}"
       @site.valid?
-      expect(@site.errors.messages[:title]).to include ("は20文字以内で入力してください")
+      expect(@site.errors.messages[:title]).to include ("は200文字以内で入力してください")
     end
     it "longitude,latitudeの組み合わせユニークテスト" do
       @site3 = Site.new(name:"test_site3",map_id:@map.id,latitude:35,longitude:135)

@@ -3,12 +3,12 @@
   <% define_check = defined? site %>
   <% unless define_check.nil? %>
     <% if site.title != nil %>
-      <h3><%= t('maps.site_name') %> : <%= site.title %></h3>
+      <h3><%= t('maps.site_name') %> : <%= sanitize url_to_link("#{site.title}") %></h3>
     <% else %>
       <h5><%= t('maps.name_site') %></h5>
       <%= form_with(model:@site,url:map_site_path(@site),remote: true,method: :patch) do |form| %>
         <%= form.label :title, t('maps.name') %>
-        <%= form.text_field :title %>
+        <%= form.text_field :title ,size: "49"%><br>
         <%= form.submit t('maps.register') %>
       <% end %>
     <% end %>

@@ -207,6 +207,15 @@
       </div>
       <div class = 'item'>
         <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
+          <%= icon('fas','bus-alt',class: "fa-3x fa-fw fa-bus-alt" )%>
+          <%= f.hidden_field :name, value: "fas fa-bus-alt fa-3x" %>
+          <%= f.hidden_field :longitude %>
+          <%= f.hidden_field :latitude %>
+          <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
+        <% end %>
+      </div>
+      <div class = 'item'>
+        <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
           <%= icon('fas','taxi',class: "fa-3x fa-fw fa-taxi" )%>
             <%= f.hidden_field :name, value: "fas fa-taxi fa-3x" %>
             <%= f.hidden_field :longitude %>

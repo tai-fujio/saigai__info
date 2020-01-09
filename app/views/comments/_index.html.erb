@@ -4,7 +4,7 @@
     <% site.comments.each do |comment|%>
       <% unless comment.id.nil? %>
         <div id = "comment_show">
-          <h3><%= comment.content %></h3>
+          <h3><%= sanitize url_to_link("#{comment.content}") %></h3>
           <h5><%= time_ago_in_words(comment.created_at)+t('maps.time_before') %></h5>
           <div id = "reviews_show">
             <div class = "review">

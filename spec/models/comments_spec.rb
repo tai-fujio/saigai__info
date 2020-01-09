@@ -13,9 +13,9 @@ RSpec.describe Comment, type: :model do
       expect(comment.errors.messages[:content]).to include ("を入力してください")
     end
     it "content文字数制約テスト" do
-      comment = Comment.new(content: "#{'a'*141}")
+      comment = Comment.new(content: "#{'a'*241}")
       comment.valid?
-      expect(comment.errors.messages[:content]).to include ("は140文字以内で入力してください")
+      expect(comment.errors.messages[:content]).to include ("は240文字以内で入力してください")
     end
   end
   describe "ソートテスト" do
