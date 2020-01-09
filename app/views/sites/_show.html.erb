@@ -7,7 +7,7 @@
     <% else %>
       <h5><%= t('maps.name_site') %></h5>
       <%= form_with(model:@site,url:map_site_path(@site),remote: true,method: :patch) do |form| %>
-        <%= form.label :title, t('maps.name') %>
+        <%= form.label :title, t('maps.enter') %>
         <%= form.text_field :title ,size: "49"%><br>
         <%= form.submit t('maps.register') %>
       <% end %>

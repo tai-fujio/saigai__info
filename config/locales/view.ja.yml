@@ -27,10 +27,11 @@ ja:
     select_icon: アイコンから選んでください
     map_name: Map名
     map_creater: Map作成者
-    site_name: この地点の名前
+    site_name: この地点の情報
     name_site: |-
       この地点に名前やURLを登録できます
     name: 名前
+    enter: 入力
     register: 登録する
     back: もどる
     select: えらぶ
