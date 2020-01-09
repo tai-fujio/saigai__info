@@ -46,7 +46,6 @@ rails version: rails 5.2.4
 
 ## 使用Gem
 * 'webpacker'
-* 'mapbox-gl-rails'
 * 'sassc-rails'
 * 'font-awesome-sass'
 * 'gem 'jquery-rails'
