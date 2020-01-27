@@ -16,6 +16,8 @@ class SitesController < ApplicationController
     @site = @map.sites.build(site_params)
     if @site.save
       redirect_to map_path(@map)
+    elsif @site.latitude == nil || @site.longitude == nil
+      redirect_to map_path(@map)
     else
       render file: "#{Rails.root}/public/500.html", layout: false, status: 500
     end

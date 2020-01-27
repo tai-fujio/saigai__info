@@ -1,5 +1,8 @@
 if(typeof jQuery != "undefined"){
   $(function(){
+
+    $("#right_bar").scrollTop(0);
+
     $("#sites_show").html("<%= j(render 'sites/show',{map:@map,site:@site}) %>")
 
     $("#comments_new").html("<%= j(render 'comments/new',{map:@map,site:@site,comment:@comment}) %>")
@@ -11,5 +14,6 @@ if(typeof jQuery != "undefined"){
     $("textarea").val("");
 
     $('#reviews_validation').html("");
+
     });
   }
