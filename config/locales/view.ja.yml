@@ -4,7 +4,7 @@ ja:
     input_comment: コメントを入力
     within_240_characters: |-
       240文字以内で入力
-      (URLを入力できます。httpから入力してください)
+      (URLはhttpから入力してください)
     at_least_6_characters: 6文字以上で入力
     reenter_password: ６文字以上で再度入力
     comment: コメントする
