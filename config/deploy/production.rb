@@ -1,4 +1,4 @@
-server '18.179.169.113', user: 'app', roles: %w{app db web}
+server '3.114.150.235', user: 'app', roles: %w{app db web}
 set :ssh_options, keys: '/Users/fujio/.ssh/id_rsa'
 # server-based syntax
 # ======================
