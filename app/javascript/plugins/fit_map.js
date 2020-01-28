@@ -1,5 +1,6 @@
 const fitMap = (map, markers) => {
-  var center_marker = markers.slice(0)[0];
+  var marker_counts = markers.length - 2
+  var center_marker = markers.slice(marker_counts)[0];
   var home_coordinates = [
     [center_marker.lng,center_marker.lat],[center_marker.lng,center_marker.lat]
   ];

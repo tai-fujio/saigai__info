@@ -1,7 +1,12 @@
 <% unless @map&.id.nil? %>
   <div id="menu_bar">
-    <div class = "head_component root_btn">
+    <div class = "head_component">
       <%= button_to t('maps.root_page'),{controller: 'maps',action: 'root'},{method: :get,class:"root_button"} %>
+    </div>
+    <div class = "head_component">
+      <button class="centering_button" type="button">
+         <%= t('maps.centering') %>
+      </button>
     </div>
     <div class="direction_box">
       <p>&lt;<%= t('maps.register_site') %> &gt; <br><%= t('maps.to_map') %><br><%= t('maps.doubleclick') %><br> ↓ <br><%= t('maps.to_icon') %><br><%= t('maps.click') %></p>

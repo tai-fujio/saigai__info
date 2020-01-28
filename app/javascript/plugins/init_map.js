@@ -3,6 +3,7 @@ import { placeMarker } from './place_marker';
 import { fitMap } from './fit_map';
 import { sidebarClose } from './sidebar_close';
 import { rightbarOpen } from './rightbar_open';
+import { centeringMap } from './centering_map';
 
 const initMap = () => {
   const mapDiv = document.getElementById('map');
@@ -52,7 +53,6 @@ const initMap = () => {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
       });
-
       fitMap(map,markers);
       placeMarker(map, markers);
       map.on('mousemove', function (e) {
@@ -70,6 +70,8 @@ const initMap = () => {
       rightbarOpen();
 
       sidebarClose();
+
+      centeringMap();
     };
   };
 };
