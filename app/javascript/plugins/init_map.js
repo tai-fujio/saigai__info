@@ -13,7 +13,7 @@ const initMap = () => {
       // #サイト未登録の場合
       window.map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v9',
+        style: 'mapbox://styles/mapbox/streets-v11',
       });
 
       map.flyTo({
