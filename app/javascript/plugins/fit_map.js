@@ -1,6 +1,10 @@
 const fitMap = (map, markers) => {
-  var marker_counts = markers.length - 2
-  var center_marker = markers.slice(marker_counts)[0];
+  if(sessionStorage.getItem("dbclick") == "true"){
+    var marker_counts = markers.length - 2;
+    var center_marker = markers.slice(marker_counts)[0];
+  }else{
+    var center_marker = markers.slice(0)[0];
+  }
   var home_coordinates = [
     [center_marker.lng,center_marker.lat],[center_marker.lng,center_marker.lat]
   ];

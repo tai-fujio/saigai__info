@@ -8,6 +8,7 @@ const centerPoint = () => {
   ];
   map.fitBounds(home_coordinates, { padding: 0, maxZoom: 15.8, duration: 0 });
   };
+  sessionStorage.setItem('dbclick', false);
 };
 
 export {centerPoint};

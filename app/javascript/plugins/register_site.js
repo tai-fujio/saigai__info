@@ -16,4 +16,5 @@ document.getElementById("map").ondblclick = function(e){
   for(var i = 0; i < $('[id=site_longitude]').length; i++){
     $('[id=site_longitude]')[i].value = lng;
   };
+  sessionStorage.setItem('dbclick', true);
 }

@@ -53,8 +53,11 @@ const initMap = () => {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
       });
+
       fitMap(map,markers);
+
       placeMarker(map, markers);
+
       map.on('mousemove', function (e) {
         document.getElementById('info').innerHTML =
         JSON.stringify(e.lngLat.wrap());
@@ -74,6 +77,7 @@ const initMap = () => {
       centeringMap();
     };
   };
+  sessionStorage.setItem('dbclick', false);
 };
 
 export {initMap};
