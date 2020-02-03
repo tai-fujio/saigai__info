@@ -1,4 +1,4 @@
-# アプリ名：saigai__info
+# アプリ名：saigai-info
 ![運用画面](app/assets/images/saigai__info_page.png)
 
 ## アプリ概要
@@ -60,5 +60,5 @@ rails version: rails 5.2.4
 2. bundle install
 3. yarn install
 6. rails db:create rails db:migrate rails db:seed
-7. .envファイル作成（MAPBOX_API_KEY記入)
+7. .envファイル作成（MAPBOX_API_KEY取得・記入)
 8. rails s
