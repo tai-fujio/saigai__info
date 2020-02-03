@@ -44,6 +44,9 @@ rails version: rails 5.2.4
 ## 画面構成
 ![画面構成](app/assets/images/wire_frame.png)
 
+## 技術構成
+![技術構成](app/assets/images/technical_diagram.png)
+
 ## 使用Gem
 * 'webpacker'
 * 'sassc-rails'
