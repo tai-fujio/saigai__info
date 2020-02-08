@@ -18,8 +18,6 @@ document.getElementById("map").ondblclick = function(e){
   document.body.appendChild(modal);
   setTimeout(function(){
     document.body.removeChild(modal);
-    document.body.removeChild(modalContent);
-    document.body.removeChild(modalBody);
   },900);
 
   var coordinates = document.getElementsByTagName("pre")
