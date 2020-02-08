@@ -1,5 +1,26 @@
+const registerSite = () => {
+
 if(document.getElementById("map")){
 document.getElementById("map").ondblclick = function(e){
+
+  var modal = document.createElement("div");
+  modal.className = "modal"
+  var modalContent = document.createElement("div"); 
+  modalContent.className = "modal-content";
+  var modalInfo = document.createElement("div");
+  modalInfo.className = "modal-info";
+
+  modalInfo.appendChild(document.createTextNode('この地点を登録できます'));
+  modalInfo.appendChild(document.createElement('br'));
+  modalInfo.appendChild(document.createTextNode('アイコンから選んでください'));
+  modalContent.appendChild(modalInfo);
+  modal.appendChild(modalContent);
+  document.body.appendChild(modal);
+  setTimeout(function(){
+    document.body.removeChild(modal);
+    document.body.removeChild(modalContent);
+    document.body.removeChild(modalBody);
+  },900);
 
   var coordinates = document.getElementsByTagName("pre")
   .info.innerHTML
@@ -14,5 +35,7 @@ document.getElementById("map").ondblclick = function(e){
     $('[id=site_longitude]')[i].value = lng;
   };
   sessionStorage.setItem('dbclick', true);
+  }};
 };
-}
+
+export {registerSite};

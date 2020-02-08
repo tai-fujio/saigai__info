@@ -23,25 +23,6 @@ body div a {
   z-index: 1;
 }
 
-#init_info {
-	position:fixed;
-	left:0;
-	top:0;
-	height:100%;
-	width:100%;
-  background:rgba(0, 0, 0, .4);
-  z-index:3;
-}
-
-#click_info {
-	position:fixed;
-	left:0;
-	top:0;
-	height:100%;
-	width:100%;
-  z-index:3;
-}
-
 .direction_box {
   cursor:pointer;
 	border:none;
@@ -51,29 +32,6 @@ body div a {
   outline:none;
   font-size: 0.7rem;
   text-align: center;
-}
-
-#alert_box {
-	margin:200px auto 0;
-	text-align:center;
-	padding-top:25px;
-	width:25%;
-	height:25%;
-	background:#FFF;
-  border-radius:5px;
-}
-
-#notice_box {
-  position: absolute;
-  left: 15%;
-  top: -15%;
-	margin:200px auto 0;
-	text-align:center;
-	padding-top:25px;
-	width:20%;
-	height:13%;
-	background:#FFF;
-  border-radius:5px;
 }
 
 .ok_btn{
@@ -88,18 +46,6 @@ body div a {
 
 #info {
 visibility: hidden !important;
-display: block;
-position: relative;
-margin: 0px auto;
-width: 50%;
-padding: 10px;
-border: none;
-border-radius: 3px;
-font-size: 12px;
-text-align: center;
-color: #222;
-background: #fff;
-z-index:1;
 }
 
 #menu_bar {
@@ -304,8 +250,9 @@ transition: 0.5s;
   .root_button{
     cursor: pointer;
     border: none;
-    color:white;
-    background-color:blue;
+    color:blue;
+    background-color:white;
+    border: 1px solid blue;
     border-radius: 3px;
     outline: none;
     text-align: center;
@@ -315,9 +262,8 @@ transition: 0.5s;
 
   .centering_button{
     cursor: pointer;
-    color:blue;
-    background-color: white;
-    border: 1px solid blue;
+    color:white;
+    background-color: blue;
     border-radius: 3px;
     outline: none;
     text-align: center;
@@ -336,7 +282,6 @@ transition: 0.5s;
     background-color: rgba(3, 3, 199, 0.5);
   }
   .modal-container {
-    z-index: 15;
     margin: 5% auto;
     width: 70%;
     animation-duration: 1s;
@@ -352,7 +297,6 @@ transition: 0.5s;
   .modal-header {
     margin-top: 10%;
     width: 50vw;
-    z-index: 20;
   }
 
   .modal-header img {
@@ -362,7 +306,6 @@ transition: 0.5s;
   
   .modal-body {
     width: 50vw;
-    z-index:20;
     color:black;
     font-size:1.2rem;
     background-color:lightpink;
@@ -376,4 +319,25 @@ transition: 0.5s;
   
   .btn-close {
     border: 0;
+  }
+
+  .modal-info {
+    width: 40vw;
+    color:black;
+    font-size:1.2rem;
+    background-color:white;
+    padding: 0.2rem;
+    border-radius: 8px;
+  }
+
+  .modal-content {
+    margin: 5% auto;
+    width: 50%;
+    animation-duration: 1s;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
   }
