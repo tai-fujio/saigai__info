@@ -26,7 +26,7 @@
                 <%=f.submit(t('maps.delete'),class:"admin_button",data:{confirm: "削除しますか"})%>
                 <%=f.hidden_field :id,value:comment.id %>
                 <%=f.hidden_field :map_id,value:comment.site.map.id %>
-                <%=f.password_field :password ,placeholder: t('maps.password'),size: "13"%>
+                <%=f.password_field :password ,placeholder: t('maps.password'),size: "9"%>
               <% end %>
             </div>
           </div>

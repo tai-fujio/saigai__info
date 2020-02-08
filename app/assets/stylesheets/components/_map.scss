@@ -54,7 +54,7 @@ flex-direction: column;
 justify-content: space-between;
 height: 100%;
 width: 6%;
-min-width:70px;
+min-width:75px;
 position: fixed; 
 z-index: 2;
 top: 0;
@@ -199,6 +199,16 @@ transition: 0.5s;
     border-radius: 15px;
   }
 
+  .register_btn {
+    font-size: medium;
+    display: inline-block;
+    padding: 0.1em 0.3em;
+    text-decoration: none;
+    background-color: grey;
+    color:white;
+    border-radius: 3px;
+  }
+
   .btn-flat-border:hover {
     background: #67c5ff;
     color: white;
@@ -340,4 +350,18 @@ transition: 0.5s;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
+  }
+
+  .modal-info-btn {
+    width: 40vw;
+    font-size:1.2rem;
+    background-color:#45ABB5;
+    padding: 0.2rem;
+    border-radius: 8px;
+    cursor:pointer;
+    border:none;
+    color:#FFF;
+    border-radius:8px;
+    outline:none;
+    text-align: center;
   }

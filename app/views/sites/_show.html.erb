@@ -7,9 +7,9 @@
     <% else %>
       <h5><%= t('maps.name_site') %></h5>
       <%= form_with(model:@site,url:map_site_path(@site),remote: true,method: :patch) do |form| %>
-        <%= form.label :title, t('maps.enter') %>
-        <%= form.text_field :title ,size: "49"%><br>
-        <%= form.submit t('maps.register') %>
+        <strong><%= form.label :title, t('maps.enter') %></strong>
+        <%= form.text_field :title ,size: "29"%><br>
+        <%= form.submit t('maps.register'),class: "register_btn"%>
       <% end %>
     <% end %>
     <div id = "sites_validation">
@@ -21,7 +21,7 @@
             <%=f.submit(t('maps.site_delete'),class:"admin_button",data:{confirm: "削除しますか"})%>
             <%=f.hidden_field :id,value:@site.id %>
             <%=f.hidden_field :map_id,value:@site.map_id %>
-            <%=f.password_field :password ,placeholder: t('maps.password'),size: "13"%>
+            <%=f.password_field :password ,placeholder: t('maps.password'),size: "9"%>
           <% end %>
         <% end %>
       <% end %>

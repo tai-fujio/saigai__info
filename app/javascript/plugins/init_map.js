@@ -4,7 +4,8 @@ import { fitMap } from './fit_map';
 import { sidebarClose } from './sidebar_close';
 import { rightbarOpen } from './rightbar_open';
 import { centeringMap } from './centering_map';
-import { rightBarScroll } from '../plugins/right_bar_scroll';
+import { rightBarScroll } from './right_bar_scroll';
+import { createMapNotify } from './create_map_notify'
 
 const initMap = () => {
   const mapDiv = document.getElementById('map');
@@ -35,18 +36,7 @@ const initMap = () => {
       showUserLocation: false
       }));
 
-      const user_info = () => {
-        $("#init_info").fadeIn(300);
-        $(".ok_btn").click(function(){
-          $("#init_info").fadeOut(300);
-        });
-      };
-
-      $("#map").one('mousemove', function () {
-        setTimeout(function(){
-          user_info();
-        },700);
-      });
+      createMapNotify();
 
     }else{
       // #サイトが登録してある場合
