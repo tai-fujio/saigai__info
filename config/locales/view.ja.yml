@@ -16,7 +16,7 @@ ja:
     registered: 登録されました
     select_map: マップをみる
     create_map: マップをつくる
-    necessary_to_admin: ※地図登録情報削除に必要です
+    necessary_to_admin: ※パスワードは地図登録情報削除の際必要です
     user_definable: 入力は任意
     create: つくる
     update_now: マップ表示準備中

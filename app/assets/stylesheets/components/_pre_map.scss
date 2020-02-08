@@ -59,3 +59,33 @@
   select{
     text-align-last: center;
   }
+
+  .password_field{
+    position:relative;
+  }
+
+  .tooltips {
+    z-index: 10;
+    padding: 0.3em 0.5em;
+    color: #FFFFFF;
+    background-color:rgba(201, 79, 79,1.0);
+    border-radius: 0.5em;
+    left:50%;
+    top: 70%;
+    position:absolute;
+    transform: translate(-50%,-100%);
+    text-align: center;
+  }
+
+  @media screen and (max-width: 767px) { 
+    .title{
+      font-size: 4vmin;
+    }
+    .button{
+      width:80%;
+    }
+    .create_map_table{
+      font-size: 4vmin;
+      margin-right:5%;
+    }
+  }

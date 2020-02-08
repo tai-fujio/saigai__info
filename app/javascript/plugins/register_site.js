@@ -1,8 +1,5 @@
-import { userMessage } from './user_info';
-
+if(document.getElementById("map")){
 document.getElementById("map").ondblclick = function(e){
-
-  userMessage();
 
   var coordinates = document.getElementsByTagName("pre")
   .info.innerHTML
@@ -17,4 +14,5 @@ document.getElementById("map").ondblclick = function(e){
     $('[id=site_longitude]')[i].value = lng;
   };
   sessionStorage.setItem('dbclick', true);
+};
 }

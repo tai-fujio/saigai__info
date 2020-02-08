@@ -4,6 +4,7 @@ import { fitMap } from './fit_map';
 import { sidebarClose } from './sidebar_close';
 import { rightbarOpen } from './rightbar_open';
 import { centeringMap } from './centering_map';
+import { rightBarScroll } from '../plugins/right_bar_scroll';
 
 const initMap = () => {
   const mapDiv = document.getElementById('map');
@@ -75,6 +76,8 @@ const initMap = () => {
       sidebarClose();
 
       centeringMap();
+
+      rightBarScroll();
     };
   };
   sessionStorage.setItem('dbclick', false);

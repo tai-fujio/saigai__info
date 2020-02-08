@@ -1,33 +1,37 @@
 <body id = "maps_index">
-  <h2><%= t('maps.create_map') %></h2>
-  <div class ="maps_validation">
-    <% @map.errors.full_messages.each do |msg| %>
-      <ul>
-        <%= "※"+msg %>
-      </ul>
-    <% end %>
+  <div class ="title">
+    <h2><%= t('maps.create_map') %></h2>
   </div>
-  <table>
-  <%=form_with(model:@map,local:true) do |f|%>
-    <tr>
-      <td><%= f.label :name %></td>
-      <td><%= f.text_field :name, size:"40"%></td>
-    </tr>
-    <tr>
-      <td><%= f.label :password %></td>
-      <td><%= f.password_field :password ,placeholder: t('maps.at_least_6_characters'),  size:"40"%>
-      <td><h5>&nbsp;<%= t('maps.necessary_to_admin') %></h5></td>
-    </tr>
-    <tr>
-      <td><%= f.label :password_confirmation %> &nbsp;&nbsp;&nbsp;</td>
-      <td><%= f.password_field :password_confirmation,placeholder: t('maps.reenter_password'),size:"40" %> </td>
-    </tr>
-    <tr>
-      <td><%= f.label :creater %></td>
-      <td><%= f.text_field :creater ,placeholder: t('maps.user_definable'),size:"40" %></td>
-    </tr>
-  </table><br>
-    <%= f.submit(t('maps.create'),class:"button") %><br><br>
-  <% end %>
-    <%= button_to t('maps.back'),{controller: 'maps',action: 'root'},{method: :get,class:"button"} %>
+  <div class ="content">
+    <div class ="maps_validation">
+      <% @map.errors.full_messages.each do |msg| %>
+        <ul>
+          <%= "※"+msg %>
+        </ul>
+      <% end %>
+    </div>
+    <table>
+    <%=form_with(model:@map,local:true) do |f|%>
+      <tr>
+        <td><%= f.label :name %></td>
+        <td><%= f.text_field :name %></td>
+      </tr>
+      <tr class="password_field" data-set=<%=t('maps.necessary_to_admin')%>>
+        <td><%= f.label :password %></td>
+        <td><%= f.password_field :password ,placeholder: t('maps.at_least_6_characters')%>
+      </tr>
+      <tr>
+        <td><%= f.label :password_confirmation %> &nbsp;&nbsp;&nbsp;</td>
+        <td><%= f.password_field :password_confirmation,placeholder: t('maps.reenter_password') %> </td>
+      </tr>
+      <tr>
+        <td><%= f.label :creater %></td>
+        <td><%= f.text_field :creater ,placeholder: t('maps.user_definable') %></td>
+      </tr>
+    </table><br>
+      <%= f.submit(t('maps.create'),class:"button") %><br><br>
+    <% end %>
+      <%= button_to t('maps.back'),{controller: 'maps',action: 'root'},{method: :get,class:"button"} %>
+  </div>
+
 </body>
