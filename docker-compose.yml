@@ -2,10 +2,6 @@ version: '3'
 services:
   db:
     image: postgres
-    environment:
-      POSTGRES_USER: 'user'
-      POSTGRESQL_PASSWORD: 'password'
-      TZ: 'Asia/Tokyo'
     ports:
       - "5432:5432"
   web:
