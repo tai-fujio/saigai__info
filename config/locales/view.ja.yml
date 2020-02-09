@@ -10,7 +10,8 @@ ja:
     comment: コメントする
     register_site: 地点登録
     to_map: 地図を
-    doubleclick: ダブルクリック
+    doubleclick1: ダブル
+    doubleclick2: クリック
     to_icon: アイコンを
     click: クリック
     registered: 登録されました
