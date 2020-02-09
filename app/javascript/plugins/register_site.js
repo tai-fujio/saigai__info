@@ -3,7 +3,7 @@ const registerSite = () => {
 if(document.getElementById("map")){
   //タブレットより小さい場面サイズの場合
   if (window.matchMedia('(max-width: 767px)').matches) {
-    var tapCount = 0 ;
+    var tapCount = 0;
     document.getElementById("map").addEventListener("touchstart", function(e){
     // ピンチが行われていない場合
     if(e.touches.length < 2){
