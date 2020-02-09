@@ -5,12 +5,14 @@ if(document.getElementById("map")){
   if (window.matchMedia('(max-width: 767px)').matches) {
     var tapCount = 0 ;
     document.getElementById("map").addEventListener("touchstart", function(e){
+    // ピンチが行われていない場合
+    if(!e.touches.lengh >= 2){
     // ダブルタップが行われたかどうかの判定
     if( !tapCount ) {
       ++tapCount ;
       setTimeout(function(){
         tapCount = 0;
-      },300) ;
+      },300);
     }else{
       var modal = document.createElement("div");
       modal.className = "modal"
@@ -43,7 +45,8 @@ if(document.getElementById("map")){
         $('[id=site_longitude]')[i].value = lng;
       };
       sessionStorage.setItem('dbclick', true);
-      }});
+      }};
+    });
     }else{
     //タブレットより大きい場面サイズの場合
     document.getElementById("map").ondblclick = function(){
