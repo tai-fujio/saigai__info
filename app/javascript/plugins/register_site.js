@@ -6,7 +6,7 @@ if(document.getElementById("map")){
     var tapCount = 0 ;
     document.getElementById("map").addEventListener("touchstart", function(e){
     // ピンチが行われていない場合
-    if(!e.touches.lengh >= 2){
+    if(e.touches.length < 2){
     // ダブルタップが行われたかどうかの判定
     if( !tapCount ) {
       ++tapCount ;
