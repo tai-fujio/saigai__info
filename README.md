@@ -41,8 +41,8 @@ rails version: rails 5.2.4
 ## 画面遷移図
 ![画面遷移図](app/assets/images/screen_transition_diagram.png)
 
-## 技術構成
-![技術構成](app/assets/images/technical_diagram.png)
+## クラウドアーキテクチャ
+![クラウドアーキテクチャ](app/assets/images/technical_diagram.png)
 
 ## スタート
 1. git clone
