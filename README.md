@@ -42,7 +42,7 @@ rails version: rails 5.2.4
 ![画面遷移図](app/assets/images/screen_transition_diagram.png)
 
 ## クラウドアーキテクチャ
-![クラウドアーキテクチャ](app/assets/images/technical_diagram.png)
+![クラウドアーキテクチャ](app/assets/images/cloud_architecture.png)
 
 ## スタート
 1. git clone
