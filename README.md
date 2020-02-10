@@ -1,5 +1,5 @@
 # アプリ名：saigai-info
-![運用画面](app/assets/images/saigai__info_page.png)
+![運用画面](app/assets/images/saigai-info.png)
 
 ## アプリ概要
 災害発生後に自治体や企業のライフライン支援情報、災害情報等をマップ上で共有するアプリです。  
