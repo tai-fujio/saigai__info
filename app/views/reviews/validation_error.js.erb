@@ -1,9 +1,9 @@
 if(typeof jQuery != "undefined"){
   $(function(){
-    $('#reviews_validation').html("<%= j(render 'message') %>");
+    $('#reviews_validation').html("");
 
     $('#sites_validation').html("");
 
-    $('#notice_message').html("");
+    $('#notice_message').html("<%= j(render 'message') %>");
     });
   }
