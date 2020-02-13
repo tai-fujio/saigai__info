@@ -13,6 +13,8 @@ const createMapNotify = () => {
     modalInfo.appendChild(document.createTextNode('はじめに中心地点を登録してください'));
     modalInfo.appendChild(document.createElement('br'));
     modalInfo.appendChild(document.createTextNode('登録は地図上をダブルクリックしてからアイコンをクリックします'));
+    modalInfo.appendChild(document.createElement('br'));
+    modalInfo.appendChild(document.createTextNode('右上の現在地アイコンを押すと現在地に移動します'));
     modalInfo.appendChild(ok_btn);
     modalContent.appendChild(modalInfo);
     modal.appendChild(modalContent);
