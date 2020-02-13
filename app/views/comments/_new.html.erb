@@ -4,7 +4,7 @@
     <%= form_with(model:[map,site,comment],remote:true,method: :post) do |form| %>
       <div id="comment_field">
         <%= form.label :content, t('maps.input_comment') %>
-        <%= form.text_area :content, size: "30x6", placeholder: t('maps.within_240_characters')%>
+        <%= form.text_area :content, size: "30x4", placeholder: t('maps.within_240_characters')%>
         <%= form.submit t('maps.comment'),class: "submit_btn"%>
       </div>
     <% end %>
