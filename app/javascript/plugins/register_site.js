@@ -1,8 +1,8 @@
 const registerSite = () => {
-
+  var user_agent = navigator.userAgent;
 if(document.getElementById("map")){
   //タブレットより小さい場面サイズの場合
-  if (window.matchMedia('(max-width: 767px)').matches) {
+  if(user_agent.indexOf('iPhone') > 0 || user_agent.indexOf('iPod') > 0 || user_agent.indexOf('Android') > 0 || user_agent.indexOf('iPad') > 0 ){
     var tapCount = 0;
     document.getElementById("map").addEventListener("touchstart", function(e){
     // ピンチが行われていない場合
