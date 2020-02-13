@@ -15,6 +15,8 @@ const createMapNotify = () => {
     modalInfo.appendChild(document.createTextNode('登録は地図上をダブルクリックしてからアイコンをクリックします'));
     modalInfo.appendChild(document.createElement('br'));
     modalInfo.appendChild(document.createTextNode('右上の現在地アイコンを押すと現在地に移動します'));
+    modalInfo.appendChild(document.createElement('br'));
+    modalInfo.appendChild(document.createTextNode('（ブラウザの種類や端末の設定により正常に動かないことがあります'));
     modalInfo.appendChild(ok_btn);
     modalContent.appendChild(modalInfo);
     modal.appendChild(modalContent);
