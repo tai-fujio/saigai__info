@@ -1,4 +1,4 @@
-const centerPoint = () => {
+const newCenterPoint = () => {
   const mapDiv = document.getElementById('map');
   if (mapDiv) {
   var markers = JSON.parse(mapDiv.dataset.markers);
@@ -11,4 +11,4 @@ const centerPoint = () => {
   sessionStorage.setItem('dbclick', false);
 };
 
-export {centerPoint};
+export {newCenterPoint};

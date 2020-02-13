@@ -1,6 +1,6 @@
 import { openBar } from './open_bar';
 
-const rightbarOpen = () => {
+const rightBarOpen = () => {
   const markers = document.getElementsByClassName("mapboxgl-marker");
   for( var i = 0 ,l = markers.length; i < l ; i++ ) {
     var marker = markers[i] ;
@@ -8,4 +8,4 @@ const rightbarOpen = () => {
     };
   };
 
-export { rightbarOpen };
+export { rightBarOpen };

@@ -1,8 +1,8 @@
 import mapboxgl from 'mapbox-gl';
 import { placeMarker } from './place_marker';
 import { fitMap } from './fit_map';
-import { sidebarClose } from './sidebar_close';
-import { rightbarOpen } from './rightbar_open';
+import { rightBarClose } from './right_bar_close';
+import { rightBarOpen } from './right_bar_open';
 import { centeringMap } from './centering_map';
 import { rightBarScroll } from './right_bar_scroll';
 import { createMapNotify } from './create_map_notify'
@@ -64,9 +64,9 @@ const initMap = () => {
         trackUserLocation: true
         }));
 
-        rightbarOpen();
+        rightBarOpen();
 
-        sidebarClose();
+        rightBarClose();
 
         centeringMap();
 
