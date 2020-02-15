@@ -16,7 +16,7 @@ const initMap = () => {
       mapboxgl.accessToken = process.env.MAPBOX_API_KEY
       const markers = JSON.parse(mapDiv.dataset.markers);
       if(markers.length <2){
-        // #サイト未登録の場合
+        // #アイコン未登録の場合
         window.map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/mapbox/streets-v11',
@@ -42,7 +42,7 @@ const initMap = () => {
         createMapNotify();
 
       }else{
-        // #サイトが登録してある場合
+        // #アイコンが登録してある場合
         window.map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/mapbox/streets-v11',

@@ -1,7 +1,7 @@
 const registerSite = () => {
   var user_agent = navigator.userAgent;
 if(document.getElementById("map")){
-  //タブレットより小さい場面サイズの場合
+  //端末がタブレットかスマホの場合
   if(user_agent.indexOf('iPhone') > 0 || user_agent.indexOf('iPod') > 0 || user_agent.indexOf('Android') > 0 || user_agent.indexOf('iPad') > 0 ){
     var tapCount = 0;
     document.getElementById("map").addEventListener("touchstart", function(e){
@@ -48,7 +48,7 @@ if(document.getElementById("map")){
       }};
     });
     }else{
-    //タブレットより大きい場面サイズの場合
+    //端末がタブレットかスマホ以外の場合
     document.getElementById("map").ondblclick = function(){
     var modal = document.createElement("div");
     modal.className = "modal"
