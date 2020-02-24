@@ -1,10 +1,14 @@
 <div id ="right_bar">
   <div>
     <div id = "right_bar_header">
-      <button href="javascript:void(0)" class="close_btn" id='close-nav'>
-         <i class="fas fa-times fa-3x"></i>
-      </button>
-      <h5 id="notice_message"></h5>
+      <div>
+        <button href="javascript:void(0)" class="close_btn" id="close-nav">
+          <i class="fas fa-times fa-3x"></i>
+        </button>
+      </div>
+      <div id="right_bar_message">
+        <h5 id="notice_message"></h5>
+      </div>
     </div>
     <div id = "right_bar_head">
       <%= render 'sites/show' ,locals:{site:@site,map:@map} %>

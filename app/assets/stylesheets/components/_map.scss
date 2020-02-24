@@ -94,13 +94,19 @@ body {
       color: white;
       width:100%;
       z-index: 4;
-      margin-top:90px;
+      margin-top:105px;
+    }
+
+    #right_bar_message{
+      width: 100%;
+      margin: 10px 10px;
     }
 
     #right_bar_header{
       height: auto;
       color: white;
       position: absolute;
+      display: flex;
       width:100%;
       z-index: 5;
       background:rgba(0, 0, 0, .9);
@@ -191,6 +197,7 @@ body {
       color:white;
       text-align: center;
       border-radius: 50%;
+      margin: 10px 10px
     }
   
     .close_btn:focus {
