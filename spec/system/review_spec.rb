@@ -12,15 +12,15 @@ RSpec.describe Review, type: :system do
       @key = FactoryBot.create(:key, review_id:@review.id)
     end
     context "reviewをすることができる" do
-      it "reviews#count" do 
+      it "reviews#count" do
         page.set_rack_session(session_id: @map.id)
         visit "maps/#{@map.id}/sites/#{@site.id}/comments/new"
         fill_in "comment[content]", with: "テストコメント"
         click_button("コメントする")
         page.execute_script <<~JS
-          document.getElementsByClassName("thumbs")[0].text = "test_name";
+          document.getElementsByClassName("thumbs")[0].text = "button_for_test";
         JS
-        click_on "test_name"
+        click_on "button_for_test"
         expect(page.find(".vote",match: :first).text).to eq "1"
       end
     end
