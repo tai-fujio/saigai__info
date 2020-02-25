@@ -9,7 +9,7 @@ RSpec.describe Map, type: :system do
     context "maps#rootのテスト" do
       it "ルートがログイン画面である" do
         visit root_path
-        expect(page).to have_content "saigai__info"
+        expect(page).to have_content "Saigai info"
       end
     end
     context "maps#indexのテスト" do
@@ -33,7 +33,7 @@ RSpec.describe Map, type: :system do
         fill_in "map[password]", with: "111111"
         fill_in "map[password_confirmation]", with: "111111"
         click_button("つくる")
-        expect(page).to have_content "saigai__info"
+        expect(page).to have_content "Saigai info"
         click_button("マップをみる")
         expect(page).to have_content "テストマップ"
       end

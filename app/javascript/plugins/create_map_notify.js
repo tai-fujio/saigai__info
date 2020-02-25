@@ -3,7 +3,7 @@ const createMapNotify = () => {
   if(document.getElementById("map")){
     var modal = document.createElement("div");
     modal.className = "modal"
-    var modalContent = document.createElement("div"); 
+    var modalContent = document.createElement("div");
     modalContent.className = "modal-content";
     var modalInfo = document.createElement("div");
     modalInfo.className = "modal-info";
