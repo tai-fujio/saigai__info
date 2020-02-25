@@ -7,6 +7,7 @@ const placeMarker = (map, markers) => {
     if (marker == all_markers[0]){
       marker.name = marker.name + " faa-flash" + " animated"
     }
+    // 各マーカーにリンクを貼る
     var element = document.createElement('a');
     element.setAttribute(`href`,`${marker.map_id}/sites/${marker.id}`);
     element.setAttribute(`data-remote`,`true`);

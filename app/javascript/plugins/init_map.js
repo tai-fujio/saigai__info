@@ -26,12 +26,12 @@ const initMap = () => {
           center: [ 139.7, 35.6 ],
           zoom: 10,
         });
-
+        // #地図上のカーソルが緯度・経度を取得
         map.on('mousemove', function (e) {
           document.getElementById('info').innerHTML =
           JSON.stringify(e.lngLat.wrap());
         });
-
+        // #現在地ボタンを地図上に表示
         map.addControl(new mapboxgl.GeolocateControl({
         positionOptions: {
         enableHighAccuracy: false,timeout:6000

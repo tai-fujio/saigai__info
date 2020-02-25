@@ -14,6 +14,7 @@ if(document.getElementById("map")){
         tapCount = 0;
       },300);
     }else{
+      //端末がタブレットかスマホ以外の場合
       var modal = document.createElement("div");
       modal.className = "modal"
       var modalContent = document.createElement("div"); 

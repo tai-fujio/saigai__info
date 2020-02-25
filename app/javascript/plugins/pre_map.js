@@ -1,5 +1,5 @@
 const passwordNotify = () => {
-
+// マップ作成時パスワード入力の際の注意喚起
 $(".password_field").on({
   'mouseenter':function(){
     var text = $(this).attr('data-set');
