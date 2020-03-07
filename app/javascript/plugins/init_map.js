@@ -64,11 +64,15 @@ const initMap = () => {
         trackUserLocation: true
         }));
 
+        centeringMap();
+
+        if(markers[0].name == "fas fa-search fa-3x faa-flash animated"){
+          return
+        }else{
+
         rightBarOpen();
 
         rightBarClose();
-
-        centeringMap();
 
         rightBarScroll();
       };
