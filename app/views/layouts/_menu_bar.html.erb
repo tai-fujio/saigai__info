@@ -4,8 +4,9 @@
       <%= button_to t('maps.root_page'),{controller: 'maps',action: 'root'},{method: :get,class:"root_button"} %>
     </div>
     <div class="direction_box">
-      <p>&lt;<%= t('maps.register_site') %> &gt; <br><%= t('maps.to_map') %><br><%= t('maps.doubleclick1') %><br><%= t('maps.doubleclick2') %><br> ↓ <br><%= t('maps.to_icon') %><br><%= t('maps.click') %></p>
+      <p><u><%= t('maps.register_site') %></u><br><%= t('maps.to_map') %><br><%= t('maps.doubleclick1') %><br><%= t('maps.doubleclick2') %><br> ↓ <br><%= t('maps.to_icon') %><br><%= t('maps.click') %></p>
     </div>
+    <br>
     <div class = "head_component">
       <%= form_tag('/search',method: :get,local:true) do %>
       <%= text_field_tag :place, params[:place],placeholder: t('maps.form_example') ,class:"input_field"%>
@@ -13,6 +14,7 @@
       <button class="search_button" type="submit"><%= t('maps.search') %></button>
       <% end %>
     </div>
+    <br>
     <div class = "head_component">
       <button class="centering_button" type="button">
          <%= t('maps.centering') %>

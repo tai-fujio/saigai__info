@@ -24,13 +24,12 @@ body {
   }
   
   .direction_box {
-    cursor:pointer;
     border:none;
     color:#FFF;
     background-color:#45ABB5;
-    border-radius:3px;
+    border-radius:1px;
     outline:none;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-align: center;
   }
   
@@ -221,7 +220,7 @@ body {
       text-decoration: none;
       background-color: grey;
       color:white;
-      border-radius: 3px;
+      border-radius: 5px;
     }
   
     .btn-flat-border:hover {
@@ -259,7 +258,7 @@ body {
       border: none;
       color:white;
       background-color:grey;
-      border-radius: 3px;
+      border-radius: 5px;
       outline: none;
     }
   
@@ -278,22 +277,24 @@ body {
       color:blue;
       background-color:white;
       border: 1px solid blue;
-      border-radius: 3px;
+      border-radius: 5px;
       outline: none;
       text-align: center;
       width:100%;
       margin-bottom: 5px;
+      font-size: 0.8rem;
     }
   
     .centering_button{
       cursor: pointer;
       color:white;
       background-color: blue;
-      border-radius: 3px;
+      border-radius: 5px;
       outline: none;
       text-align: center;
       width:100%;
       margin-bottom: 5px;
+      font-size: 0.8rem;
     }
 
     .input_field{
@@ -304,11 +305,12 @@ body {
       cursor: pointer;
       color:white;
       background-color: orangered;
-      border-radius: 3px;
+      border-radius: 5px;
       outline: none;
       text-align: center;
       width:100%;
       margin-bottom: 5px;
+      font-size: 0.8rem;
     }
   
     .modal {
