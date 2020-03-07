@@ -19,7 +19,8 @@ gem 'sassc','2.0.0'
 gem 'sassc-rails'
 gem 'unicorn'
 gem 'webpacker'
-gem 'geocoder'
+gem 'google_places'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
