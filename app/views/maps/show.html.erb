@@ -1,4 +1,4 @@
-<div id="my_map"><pre id='info'></pre>
+<div class="my_map"><pre id='info'></pre>
 <i class="fa fa-spinner "><%= t('maps.update_now')%></i>
-<div id='map' class = 'target' data-markers="<%= @sites_composed.to_json %>"></div>
+<%= render 'maps/map_show'%>
 </div>
