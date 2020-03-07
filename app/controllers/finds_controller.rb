@@ -11,6 +11,7 @@ class FindsController < ApplicationController
     client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
     results = client.spots_by_query(params[:place])
     filtered_results = results.find_all{|n| n.formatted_address.include?("Japan") == true}
+    binding.irb
     @sites_composed = filtered_results.first(9).map do |site|
       {
         lat: site.lat,

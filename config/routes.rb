@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'maps#root'
   get 'maps/select' => 'maps#show'
   get 'reviews/count'
-  get 'search' => 'finds#search'
+  post 'search' => 'finds#search'
   get 'finds/show'
   post 'reviews/count'
   post 'sites/delete'

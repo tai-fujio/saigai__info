@@ -8,7 +8,7 @@
     </div>
     <br>
     <div class = "head_component">
-      <%= form_tag('/search',method: :get,local:true) do %>
+      <%= form_tag('/search',method: :post,local:true) do %>
       <%= text_field_tag :place, params[:place],placeholder: t('maps.form_example') ,class:"input_field"%>
       <%= hidden_field_tag :map_id , @map.id %>
       <button class="search_button" type="submit"><%= t('maps.search') %></button>
