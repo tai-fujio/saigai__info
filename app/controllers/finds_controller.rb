@@ -19,7 +19,13 @@ class FindsController < ApplicationController
         redirect_to map_path(@map) and return
     end
     respond_to do |format|
-      format.html{redirect_to controller: 'maps', action: 'show' ,locals: {site: @site,map: @map,sites_composed: @sites_composed}}
+      format.html{redirect_to controller: 'finds', action: 'show' ,locals: {site: @site,map: @map,sites_composed: @sites_composed}}
     end
+  end
+
+  def show
+    @map = Map.find(params[:locals][:map])
+    @site = @map.sites.build
+    @sites_composed = params[:locals][:sites_composed]
   end
 end
