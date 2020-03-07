@@ -3,6 +3,10 @@ class FindsController < ApplicationController
   def search
     @map = Map.find(params[:map_id])
     @site = @map.sites.build
+    @search = InputForm.new(params.permit(:place))
+    if @search.invalid?
+      redirect_to map_path(@map) and return
+    end
     # results = Geocoder.search(params[:place])
     client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
     results = client.spots_by_query(params[:place])
