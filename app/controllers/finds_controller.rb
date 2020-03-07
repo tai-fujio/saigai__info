@@ -18,6 +18,8 @@ class FindsController < ApplicationController
     if @sites_composed.empty?
         redirect_to map_path(@map) and return
     end
+    # 配列の並びを地点登録時と合わせるための処理
+    @sites_composed.push({name:"fas fa-search fa-3x faa-flash animated",display_name:"null",lat:0,lng:0})
     respond_to do |format|
       format.html{redirect_to controller: 'finds', action: 'show' ,locals: {site: @site,map: @map,sites_composed: @sites_composed}}
     end

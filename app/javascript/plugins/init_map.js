@@ -75,6 +75,8 @@ const initMap = () => {
         rightBarClose();
 
         rightBarScroll();
+
+        };
       };
     };
     sessionStorage.setItem('dbclick', false);

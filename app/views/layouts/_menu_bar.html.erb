@@ -3,20 +3,20 @@
     <div class = "head_component">
       <%= button_to t('maps.root_page'),{controller: 'maps',action: 'root'},{method: :get,class:"root_button"} %>
     </div>
-    <div class = "head_component">
-      <button class="centering_button" type="button">
-         <%= t('maps.centering') %>
-      </button>
+    <div class="direction_box">
+      <p>&lt;<%= t('maps.register_site') %> &gt; <br><%= t('maps.to_map') %><br><%= t('maps.doubleclick1') %><br><%= t('maps.doubleclick2') %><br> ↓ <br><%= t('maps.to_icon') %><br><%= t('maps.click') %></p>
     </div>
     <div class = "head_component">
       <%= form_tag('/search',method: :get,local:true) do %>
       <%= text_field_tag :place, params[:place],placeholder: t('maps.form_example') %>
       <%= hidden_field_tag :map_id , @map.id %>
-      <button class="centering_button" type="submit">地点検索へ</button>
+      <button class="search_button" type="submit"><%= t('maps.search') %></button>
       <% end %>
     </div>
-    <div class="direction_box">
-      <p>&lt;<%= t('maps.register_site') %> &gt; <br><%= t('maps.to_map') %><br><%= t('maps.doubleclick1') %><br><%= t('maps.doubleclick2') %><br> ↓ <br><%= t('maps.to_icon') %><br><%= t('maps.click') %></p>
+    <div class = "head_component">
+      <button class="centering_button" type="button">
+         <%= t('maps.centering') %>
+      </button>
     </div>
     <div class="items">
       <div class = 'item'>
