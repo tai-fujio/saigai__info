@@ -295,6 +295,17 @@ body {
       width:100%;
       margin-bottom: 5px;
     }
+
+    .centering_button{
+      cursor: pointer;
+      color:white;
+      background-color: pink;
+      border-radius: 3px;
+      outline: none;
+      text-align: center;
+      width:100%;
+      margin-bottom: 5px;
+    }
   
     .modal {
       position: fixed;

@@ -8,6 +8,13 @@
          <%= t('maps.centering') %>
       </button>
     </div>
+    <div class = "head_component">
+      <%= form_tag('/search',method: :get,local:true) do %>
+      <%= text_field_tag :place, params[:place],placeholder: t('maps.form_example') %>
+      <%= hidden_field_tag :map_id , @map.id %>
+      <button class="centering_button" type="submit">地点検索へ</button>
+      <% end %>
+    </div>
     <div class="direction_box">
       <p>&lt;<%= t('maps.register_site') %> &gt; <br><%= t('maps.to_map') %><br><%= t('maps.doubleclick1') %><br><%= t('maps.doubleclick2') %><br> ↓ <br><%= t('maps.to_icon') %><br><%= t('maps.click') %></p>
     </div>
