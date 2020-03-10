@@ -11,7 +11,7 @@
 
 ## バージョン
 ruby version: ruby 2.6.5  
-rails version: rails 5.2.4  
+rails version: rails 5.2.4.1  
 
 ## 機能一覧
 - マップ作成機能
@@ -32,6 +32,9 @@ rails version: rails 5.2.4
 - 管理機能
    - マップ作成者は地図上に登録されたアイコンの削除、コメントの削除ができる。
 
+- 地点検索機能
+   - フォームに入力した地点に対応する場所を地図上に表示する。（国内のみ対応)
+
 ## テーブル定義
 ![テープル定義](app/assets/images/table_definition.png)
 
@@ -49,5 +52,5 @@ rails version: rails 5.2.4
 2. bundle install
 3. yarn install
 6. rails db:create rails db:migrate rails db:seed
-7. .envファイル作成（MAPBOX_API_KEY取得・記入)
+7. .envファイル作成（MAPBOX_API_KEY、Google_API_KEY取得・記入)
 8. rails s
