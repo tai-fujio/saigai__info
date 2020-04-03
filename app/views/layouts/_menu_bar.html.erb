@@ -75,7 +75,7 @@
           <%= f.submit(t('maps.register_site'), class:'ok_btn')%>
         <% end %>
       </div>
-          <div class = 'item'>
+      <div class = 'item'>
         <%= form_for(@site, url:map_sites_path(@map),map_id:@map.id,local:true) do |f| %>
           <%= icon('fa','bed',class: "fa-3x fa-fw fa-bed" )%>
           <%= f.hidden_field :name, value: "fa fa-bed fa-3x" %>
