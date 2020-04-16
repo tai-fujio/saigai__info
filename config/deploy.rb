@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.6.0'
+lock '3.11.2'
 
 set :application, 'saigai__info'
 set :repo_url, 'https://github.com/tai-fujio/saigai__info.git'
