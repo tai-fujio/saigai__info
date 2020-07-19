@@ -23,8 +23,6 @@ orbs:
           working_directory: ~/myapp
           steps:
           - checkout
-          - run: sudo apt install -y postgresql-client || true
-          - run: bundle clean --force
           - restore_cache:
             keys:
             - v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
