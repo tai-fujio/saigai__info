@@ -23,8 +23,7 @@ orbs:
           working_directory: ~/myapp
           steps:
           - checkout
-          - run:
-              name: sudo apt install -y postgresql-client || true
+          - run: sudo apt install -y postgresql-client || true
           - run: bundle clean --force
           - restore_cache:
             keys:
