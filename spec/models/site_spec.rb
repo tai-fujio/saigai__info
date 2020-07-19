@@ -34,7 +34,7 @@ RSpec.describe Site, type: :model do
       expect(@site.errors.messages[:title]).to include ("は200文字以内で入力してください")
     end
     it "longitude,latitudeの組み合わせユニークテスト" do
-      @site3 = Site.new(name:"test_site3",map_id:@map.id,latitude:35,longitude:135)
+      @site3 = Site.new(name:"test_site3",map_id:@map.id,latitude:30,longitude:130)
       @site4 = Site.new(name:"test_site3",map_id:@map.id,latitude:35,longitude:136)
       @site3.valid?
       expect(@site3.errors.messages[:longitude]).to include ("はすでに存在します")
